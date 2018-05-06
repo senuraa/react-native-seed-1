@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun May 06 23:21:32 CEST 2018
+0.baseType=DIRECTORY
+0.base=/Users/vipinessent/htdocs/react-native-app/android/app/build/intermediates/transforms/dexMerger/androidTest/release/0
+0.path=classes.dex
+0.set=DEX
+count=1

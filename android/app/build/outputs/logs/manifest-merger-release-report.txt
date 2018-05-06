@@ -1,0 +1,147 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/34b5868306b6297498cd3be5a7e6ec00/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/dde75d0ae462429aeb0a1fc5fddb8b9f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/6e58514a5f5439e3a58987a7725059b6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/387973c8dfc82f1aa0492c7eaf6473ef/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/e7a0f50f87273c7ebb886d1dd5446f4f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/4f9a8c182dd691e0fe4a3cb87c27dfb1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1c025605e2b46919f5746851c478899a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/256278cfcae3e0709a8514b1a47b392d/AndroidManifest.xml:10:1-18:12
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/f313d21bc8a0a833f30463e3e257ac3c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/ed175872055cdb19f843640992efd2ec/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/a21e39d12235e66f3edce5d84e3f241b/AndroidManifest.xml:1:1-4:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/ecd0b21f6dbf4ac8d37409bcf53d0c6e/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/56946bc2336eceb289f77efc966ddf7b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/2568eba9ab804db71ead2691d01c6022/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/3afb479080e81de5f9ff453a29ea0740/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/56e79926d1d18cfd3aaf676791d8ea13/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1a0f249edfdf21a2dc7b8c6c3e0f37c3/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:2:5-33
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/a21e39d12235e66f3edce5d84e3f241b/AndroidManifest.xml:3:3-17
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/a21e39d12235e66f3edce5d84e3f241b/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/ecd0b21f6dbf4ac8d37409bcf53d0c6e/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/ecd0b21f6dbf4ac8d37409bcf53d0c6e/AndroidManifest.xml:2:3-17
+	android:label
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:icon
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.reactnativeapp.MainActivity
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/0f84636984e04b172c1df0705c55c209/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/34b5868306b6297498cd3be5a7e6ec00/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/34b5868306b6297498cd3be5a7e6ec00/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/dde75d0ae462429aeb0a1fc5fddb8b9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/dde75d0ae462429aeb0a1fc5fddb8b9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/6e58514a5f5439e3a58987a7725059b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/6e58514a5f5439e3a58987a7725059b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/387973c8dfc82f1aa0492c7eaf6473ef/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/387973c8dfc82f1aa0492c7eaf6473ef/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/e7a0f50f87273c7ebb886d1dd5446f4f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/e7a0f50f87273c7ebb886d1dd5446f4f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/4f9a8c182dd691e0fe4a3cb87c27dfb1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/4f9a8c182dd691e0fe4a3cb87c27dfb1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1c025605e2b46919f5746851c478899a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1c025605e2b46919f5746851c478899a/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/256278cfcae3e0709a8514b1a47b392d/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/256278cfcae3e0709a8514b1a47b392d/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/f313d21bc8a0a833f30463e3e257ac3c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/f313d21bc8a0a833f30463e3e257ac3c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/ed175872055cdb19f843640992efd2ec/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/ed175872055cdb19f843640992efd2ec/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/a21e39d12235e66f3edce5d84e3f241b/AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/a21e39d12235e66f3edce5d84e3f241b/AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/56946bc2336eceb289f77efc966ddf7b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/56946bc2336eceb289f77efc966ddf7b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/2568eba9ab804db71ead2691d01c6022/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/2568eba9ab804db71ead2691d01c6022/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/3afb479080e81de5f9ff453a29ea0740/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/3afb479080e81de5f9ff453a29ea0740/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/56e79926d1d18cfd3aaf676791d8ea13/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/56e79926d1d18cfd3aaf676791d8ea13/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1a0f249edfdf21a2dc7b8c6c3e0f37c3/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/vipinessent/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1a0f249edfdf21a2dc7b8c6c3e0f37c3/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/vipinessent/htdocs/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

@@ -1,0 +1,88 @@
+{
+  "name": "reactnativeapp",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "detox": "^7.3.4",
+    "esdoc": "^1.0.4",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "jest": "^22.4.3",
+    "jest-react-native": "^18.0.0",
+    "mocha": "^4.0.1",
+    "react-test-renderer": "16.3.0-alpha.1",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "scripts": {
+    "start": "react-native start -- --config rn-cli.config.js",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "build:e2e:ios": "detox build --configuration ios.sim.release",
+    "test:e2e:ios": "detox test --configuration ios.sim.release",
+    "build:e2e:android": "detox build -c android.emu.release",
+    "test:e2e:android": "detox test -c android.emu.release"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.jsx$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testPathIgnorePatterns": [
+      "/e2e/",
+      "/node_modules/"
+    ]
+  },
+  "detox": {
+    "test-runner": "mocha",
+    "specs": "e2e",
+    "runner-config": "e2e/mocha.opts",
+    "configurations": {
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/reactnativeapp.app",
+        "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      },
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/reactnativeapp.app",
+        "build": "xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      },
+      "android.emu.debug": {
+        "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+        "build": "pushd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && popd",
+        "type": "android.emulator",
+        "name": "Nexus_5_API_25"
+      },
+      "android.emu.release": {
+        "binaryPath": "android/app/build/outputs/apk/release/app-release-unsigned.apk",
+        "build": "pushd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd",
+        "type": "android.emulator",
+        "name": "Nexus_5_API_25"
+      }
+    }
+  },
+  "dependencies": {
+    "react": "16.3.0",
+    "react-native": "0.55.3",
+    "react-native-foldview": "git+https://github.com/DigitalVibes/react-native-foldview.git",
+    "react-redux": "^5.0.7",
+    "redux": "4.0.0",
+    "redux-observable": "^0.18.0",
+    "rxjs": "5.0.0"
+  }
+}

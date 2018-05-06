@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config=":detox"><source path="/Users/vipinessent/htdocs/react-native-app/node_modules/detox/android/detox/build/intermediates/packagedAssets/minReactNative46/release"/></dataSet><dataSet config="main"><source path="/Users/vipinessent/htdocs/react-native-app/android/app/src/androidTest/assets"/><source path="/Users/vipinessent/htdocs/react-native-app/android/app/build/generated/assets/shaders/androidTest/release"/></dataSet></merger>

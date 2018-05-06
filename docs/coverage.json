@@ -1,0 +1,96 @@
+{
+  "coverage": "18.6%",
+  "expectCount": 43,
+  "actualCount": 8,
+  "files": {
+    "src/common/redux/root-epic.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        42
+      ]
+    },
+    "src/common/redux/root-middleware.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        6,
+        8
+      ]
+    },
+    "src/common/redux/root-reducer.js": {
+      "expectCount": 7,
+      "actualCount": 2,
+      "undocumentLines": [
+        6,
+        10,
+        14,
+        18,
+        25
+      ]
+    },
+    "src/common/redux/root-store.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        18,
+        21,
+        24
+      ]
+    },
+    "src/common/services/product.service.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        8,
+        12
+      ]
+    },
+    "src/modules/product/redux/product.actions.js": {
+      "expectCount": 14,
+      "actualCount": 1,
+      "undocumentLines": [
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        15,
+        21,
+        28,
+        35,
+        42,
+        48,
+        55
+      ]
+    },
+    "src/modules/product/redux/product.container.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        6,
+        12
+      ]
+    },
+    "src/modules/product/redux/product.effects.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        42
+      ]
+    },
+    "src/modules/product/redux/product.reducer.js": {
+      "expectCount": 5,
+      "actualCount": 1,
+      "undocumentLines": [
+        27,
+        49,
+        63,
+        67
+      ]
+    }
+  }
+}
