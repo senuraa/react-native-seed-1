@@ -1,4 +1,4 @@
-#Sun May 06 23:21:31 CEST 2018
+#Mon May 07 02:28:15 CEST 2018
 base.0=/Users/vipinessent/htdocs/react-native-app/android/app/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex
