@@ -1,6 +1,6 @@
 // Library
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
+import { StyleSheet, Image, Text, View, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
 
 // styles
@@ -19,7 +19,7 @@ class ProductList extends Component {
     this.state = {
       loading: false,
       data: _products,
-      greeting: undefined,
+      selectedIndex: undefined,
       page: 1,
       seed: 1,
       error: null,
@@ -41,7 +41,15 @@ class ProductList extends Component {
   };
 
   renderHeader = () => {
-    return <Text> I was here </Text>;
+  return (
+            <View style={{flex: 1, justifyContent: 'center', height: 60,
+                          backgroundColor:'black', flexDirection: 'row', margin: 10}}>
+                <Text style={{color: 'white', textAlign: 'center', paddingTop: 15, fontSize: 20,
+                              justifyContent: 'center', alignItems: 'center'}}> 
+                    Header 
+                </Text>
+            </View>   
+         );
   };
 
   renderFooter = () => {
@@ -61,22 +69,18 @@ class ProductList extends Component {
   };
 
   render() {
-    if (this.state.greeting) return this.renderAfterButton();
+    if (this.state.selectedIndex !== undefined) return this.renderAfterButton();
     return (
       <View> 
         <FlatList
           data={this.state.data}
           renderItem={({ item, index }) => (
             <View testID={'welcome-'+ index } style={styles.container}>
-              <TouchableOpacity testID={'hello_button_'+ index } onPress={this.onButtonPress.bind(this, 'Hello')}>
-                <Text style={{color: 'blue', marginBottom: 20}}>Say Hello</Text>
+              <Text> {item.title} </Text>
+              <Text> {item.price} </Text>
+              <TouchableOpacity testID={'read_button_'+ index } onPress={this.onButtonPress.bind(this, index)}>
+                <Text style={{color: 'blue', marginBottom: 20}}>Read</Text>
               </TouchableOpacity>
-              <TouchableOpacity testID={'world_button_'+ index } onPress={this.onButtonPress.bind(this, 'World')}>
-                <Text style={{color: 'blue', marginBottom: 20}}>Say World</Text>
-              </TouchableOpacity>
-             <Text> {item.title} </Text>
-             <Text> {item.price} </Text>
-             <Text> {item.description} </Text>
             </View>
           )}
           keyExtractor={item => item.id.toString() }
@@ -92,18 +96,34 @@ class ProductList extends Component {
   renderAfterButton() {
     return (
       <View style={{flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity testID='hello_button' onPress={this.onButtonPress.bind(this, undefined)}>
-          <Text style={{fontSize: 25}}>
-            {this.state.greeting}!!!
-          </Text>
+        <TouchableOpacity testID={'go_back'} onPress={this.onButtonPress.bind(this, undefined)}>
+          <Text style={{color: 'blue', marginBottom: 20}}>Back</Text>
         </TouchableOpacity>
+        <Text> {this.state.data[this.state.selectedIndex].title} </Text>
+        <Text> {this.state.data[this.state.selectedIndex].price} </Text>
+        <View style={{justifyContent: 'center', flexDirection: 'row', margin: 10}}>
+          { 
+            this.state.data[this.state.selectedIndex].images.map((image, index) => {
+              return (
+                        <Image
+                          key={index}
+                          style={{width: 100, height: 100}}
+                          source={{uri: image.thumb }}
+                        />
+                      );
+            })
+          }
+        </View>
+        <Text style={{fontSize: 25}}>
+          {this.state.data[this.state.selectedIndex].description}
+        </Text>
       </View>
     );
   }
 
-  onButtonPress(greeting) {
+  onButtonPress(selectedIndex) {
     this.setState({
-      greeting: greeting
+      selectedIndex: selectedIndex
     });
   }
 }

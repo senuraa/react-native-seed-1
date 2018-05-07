@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Image/RCTImageLoader.m \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTConvert.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTDefines.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTLog.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTAssert.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTUtils.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/Yoga.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTImageLoader.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridge.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTResizeMode.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTNetworking.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTEventEmitter.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTNetworkTask.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Image/RCTImageCache.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Image/RCTImageUtils.h

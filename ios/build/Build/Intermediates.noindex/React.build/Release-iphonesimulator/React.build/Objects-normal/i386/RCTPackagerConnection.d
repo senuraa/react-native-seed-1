@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTBundleURLProvider.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/Yoga.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/../Libraries/WebSocket/RCTReconnectingWebSocket.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h

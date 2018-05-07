@@ -1,0 +1,4 @@
+{
+	"rootDir": "../",
+	"setupTestFrameworkScriptFile": "./jest/setup.js"
+}

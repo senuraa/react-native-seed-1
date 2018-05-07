@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Text/Text/RCTTextView.m \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Text/Text/RCTTextView.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTUtils.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTAssert.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTDefines.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/UIView+React.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTComponent.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Text/Text/RCTTextShadowView.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTLayout.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/yoga/Yoga.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTRootView.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridge.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
+  /Users/vipinessent/htdocs/react-native-app/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
+  /Users/vipinessent/htdocs/react-native-app/ios/build/Build/Products/Release-iphonesimulator/include/React/RCTTextDecorationLineType.h
