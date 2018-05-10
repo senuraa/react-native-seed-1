@@ -74,7 +74,7 @@
         "binaryPath": "android/app/build/outputs/apk/release/app-release-unsigned.apk",
         "build": "pushd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd",
         "type": "android.emulator",
-        "name": "Nexus_5_API_25"
+        "name": "Android_ARMv7a_Nougat"
       }
     }
   },
