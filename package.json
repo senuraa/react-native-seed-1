@@ -5,7 +5,7 @@
   "devDependencies": {
     "babel-jest": "^22.4.3",
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "detox": "^7.3.4",
+    "detox": "^7.3.6",
     "esdoc": "^1.0.4",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-jsx-plugin": "^1.0.0",
