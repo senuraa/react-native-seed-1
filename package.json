@@ -20,6 +20,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "jest",
+    "build:docs": "./node_modules/.bin/esdoc",
     "build:e2e:ios": "detox build --configuration ios.sim.release",
     "test:e2e:ios": "detox build --configuration ios.sim.release && detox test --configuration ios.sim.release",
     "build:e2e:android": "detox build -c android.emu.release",

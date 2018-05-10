@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 418,
+  "end": 264,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 418,
+    "end": 264,
     "loc": {
       "start": {
         "line": 1,
@@ -30,77 +30,8 @@
     "body": [
       {
         "type": "ImportDeclaration",
-        "start": 0,
-        "end": 51,
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 1,
-            "column": 51
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportNamespaceSpecifier",
-            "start": 7,
-            "end": 29,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 7
-              },
-              "end": {
-                "line": 1,
-                "column": 29
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 12,
-              "end": 29,
-              "loc": {
-                "start": {
-                  "line": 1,
-                  "column": 12
-                },
-                "end": {
-                  "line": 1,
-                  "column": 29
-                },
-                "identifierName": "promiseMiddleware"
-              },
-              "name": "promiseMiddleware"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 35,
-          "end": 50,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 35
-            },
-            "end": {
-              "line": 1,
-              "column": 50
-            }
-          },
-          "extra": {
-            "rawValue": "redux-promise",
-            "raw": "'redux-promise'"
-          },
-          "value": "redux-promise"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 52,
-        "end": 108,
+        "start": 11,
+        "end": 67,
         "loc": {
           "start": {
             "line": 2,
@@ -114,8 +45,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 61,
-            "end": 81,
+            "start": 20,
+            "end": 40,
             "loc": {
               "start": {
                 "line": 2,
@@ -128,8 +59,26 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 61,
-              "end": 81,
+              "start": 20,
+              "end": 40,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 29
+                },
+                "identifierName": "createEpicMiddleware"
+              },
+              "name": "createEpicMiddleware",
+              "leadingComments": null
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 20,
+              "end": 40,
               "loc": {
                 "start": {
                   "line": 2,
@@ -143,29 +92,13 @@
               },
               "name": "createEpicMiddleware"
             },
-            "local": {
-              "type": "Identifier",
-              "start": 61,
-              "end": 81,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 9
-                },
-                "end": {
-                  "line": 2,
-                  "column": 29
-                },
-                "identifierName": "createEpicMiddleware"
-              },
-              "name": "createEpicMiddleware"
-            }
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 89,
-          "end": 107,
+          "start": 48,
+          "end": 66,
           "loc": {
             "start": {
               "line": 2,
@@ -181,171 +114,123 @@
             "raw": "'redux-observable'"
           },
           "value": "redux-observable"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentLine",
+            "value": " Library",
+            "start": 0,
+            "end": 10,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 10
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": " Epics",
+            "start": 69,
+            "end": 77,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 8
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ImportDeclaration",
-        "start": 109,
-        "end": 173,
+        "start": 78,
+        "end": 117,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 3,
-            "column": 64
+            "line": 5,
+            "column": 39
           }
         },
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 117,
-            "end": 133,
+            "start": 87,
+            "end": 95,
             "loc": {
               "start": {
-                "line": 3,
-                "column": 8
+                "line": 5,
+                "column": 9
               },
               "end": {
-                "line": 3,
-                "column": 24
+                "line": 5,
+                "column": 17
               }
             },
             "imported": {
               "type": "Identifier",
-              "start": 117,
-              "end": 133,
+              "start": 87,
+              "end": 95,
               "loc": {
                 "start": {
-                  "line": 3,
-                  "column": 8
+                  "line": 5,
+                  "column": 9
                 },
                 "end": {
-                  "line": 3,
-                  "column": 24
+                  "line": 5,
+                  "column": 17
                 },
-                "identifierName": "LoggerMiddleware"
+                "identifierName": "rootEpic"
               },
-              "name": "LoggerMiddleware"
+              "name": "rootEpic",
+              "leadingComments": null
             },
             "local": {
               "type": "Identifier",
-              "start": 117,
-              "end": 133,
+              "start": 87,
+              "end": 95,
               "loc": {
                 "start": {
-                  "line": 3,
-                  "column": 8
+                  "line": 5,
+                  "column": 9
                 },
                 "end": {
-                  "line": 3,
-                  "column": 24
+                  "line": 5,
+                  "column": 17
                 },
-                "identifierName": "LoggerMiddleware"
+                "identifierName": "rootEpic"
               },
-              "name": "LoggerMiddleware"
-            }
+              "name": "rootEpic"
+            },
+            "leadingComments": null
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 140,
-          "end": 172,
+          "start": 103,
+          "end": 116,
           "loc": {
             "start": {
-              "line": 3,
-              "column": 31
+              "line": 5,
+              "column": 25
             },
             "end": {
-              "line": 3,
-              "column": 63
-            }
-          },
-          "extra": {
-            "rawValue": "./middleware/logger.middleware",
-            "raw": "'./middleware/logger.middleware'"
-          },
-          "value": "./middleware/logger.middleware"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 174,
-        "end": 208,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 34
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportSpecifier",
-            "start": 182,
-            "end": 187,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 8
-              },
-              "end": {
-                "line": 4,
-                "column": 13
-              }
-            },
-            "imported": {
-              "type": "Identifier",
-              "start": 182,
-              "end": 187,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 8
-                },
-                "end": {
-                  "line": 4,
-                  "column": 13
-                },
-                "identifierName": "Epics"
-              },
-              "name": "Epics"
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 182,
-              "end": 187,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 8
-                },
-                "end": {
-                  "line": 4,
-                  "column": 13
-                },
-                "identifierName": "Epics"
-              },
-              "name": "Epics"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 194,
-          "end": 207,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 20
-            },
-            "end": {
-              "line": 4,
-              "column": 33
+              "line": 5,
+              "column": 38
             }
           },
           "extra": {
@@ -353,48 +238,66 @@
             "raw": "'./root-epic'"
           },
           "value": "./root-epic"
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentLine",
+            "value": " Epics",
+            "start": 69,
+            "end": 77,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 8
+              }
+            }
+          }
+        ]
       },
       {
         "type": "VariableDeclaration",
-        "start": 210,
-        "end": 270,
+        "start": 119,
+        "end": 173,
         "loc": {
           "start": {
-            "line": 6,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 6,
-            "column": 60
+            "line": 7,
+            "column": 54
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 216,
-            "end": 269,
+            "start": 125,
+            "end": 172,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 7,
                 "column": 6
               },
               "end": {
-                "line": 6,
-                "column": 59
+                "line": 7,
+                "column": 53
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 216,
-              "end": 230,
+              "start": 125,
+              "end": 139,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 7,
                   "column": 6
                 },
                 "end": {
-                  "line": 6,
+                  "line": 7,
                   "column": 20
                 },
                 "identifierName": "epicMiddleware"
@@ -403,29 +306,29 @@
             },
             "init": {
               "type": "CallExpression",
-              "start": 233,
-              "end": 269,
+              "start": 142,
+              "end": 172,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 7,
                   "column": 23
                 },
                 "end": {
-                  "line": 6,
-                  "column": 59
+                  "line": 7,
+                  "column": 53
                 }
               },
               "callee": {
                 "type": "Identifier",
-                "start": 233,
-                "end": 253,
+                "start": 142,
+                "end": 162,
                 "loc": {
                   "start": {
-                    "line": 6,
+                    "line": 7,
                     "column": 23
                   },
                   "end": {
-                    "line": 6,
+                    "line": 7,
                     "column": 43
                   },
                   "identifierName": "createEpicMiddleware"
@@ -434,54 +337,21 @@
               },
               "arguments": [
                 {
-                  "type": "MemberExpression",
-                  "start": 254,
-                  "end": 268,
+                  "type": "Identifier",
+                  "start": 163,
+                  "end": 171,
                   "loc": {
                     "start": {
-                      "line": 6,
+                      "line": 7,
                       "column": 44
                     },
                     "end": {
-                      "line": 6,
-                      "column": 58
-                    }
-                  },
-                  "object": {
-                    "type": "Identifier",
-                    "start": 254,
-                    "end": 259,
-                    "loc": {
-                      "start": {
-                        "line": 6,
-                        "column": 44
-                      },
-                      "end": {
-                        "line": 6,
-                        "column": 49
-                      },
-                      "identifierName": "Epics"
+                      "line": 7,
+                      "column": 52
                     },
-                    "name": "Epics"
+                    "identifierName": "rootEpic"
                   },
-                  "property": {
-                    "type": "Identifier",
-                    "start": 260,
-                    "end": 268,
-                    "loc": {
-                      "start": {
-                        "line": 6,
-                        "column": 50
-                      },
-                      "end": {
-                        "line": 6,
-                        "column": 58
-                      },
-                      "identifierName": "rootEpic"
-                    },
-                    "name": "rootEpic"
-                  },
-                  "computed": false
+                  "name": "rootEpic"
                 }
               ]
             }
@@ -492,15 +362,15 @@
           {
             "type": "CommentLine",
             "value": " define store middlewares as an array",
-            "start": 271,
-            "end": 310,
+            "start": 175,
+            "end": 214,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 9,
                 "column": 0
               },
               "end": {
-                "line": 7,
+                "line": 9,
                 "column": 39
               }
             }
@@ -509,11 +379,11 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 311,
-        "end": 417,
+        "start": 215,
+        "end": 263,
         "loc": {
           "start": {
-            "line": 8,
+            "line": 10,
             "column": 0
           },
           "end": {
@@ -525,11 +395,11 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 318,
-          "end": 417,
+          "start": 222,
+          "end": 263,
           "loc": {
             "start": {
-              "line": 8,
+              "line": 10,
               "column": 7
             },
             "end": {
@@ -540,11 +410,11 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 324,
-              "end": 416,
+              "start": 228,
+              "end": 262,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 10,
                   "column": 13
                 },
                 "end": {
@@ -554,15 +424,15 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 324,
-                "end": 335,
+                "start": 228,
+                "end": 239,
                 "loc": {
                   "start": {
-                    "line": 8,
+                    "line": 10,
                     "column": 13
                   },
                   "end": {
-                    "line": 8,
+                    "line": 10,
                     "column": 24
                   },
                   "identifierName": "Middlewares"
@@ -572,11 +442,11 @@
               },
               "init": {
                 "type": "ArrayExpression",
-                "start": 338,
-                "end": 416,
+                "start": 242,
+                "end": 262,
                 "loc": {
                   "start": {
-                    "line": 8,
+                    "line": 10,
                     "column": 27
                   },
                   "end": {
@@ -587,87 +457,20 @@
                 "elements": [
                   {
                     "type": "Identifier",
-                    "start": 342,
-                    "end": 356,
+                    "start": 246,
+                    "end": 260,
                     "loc": {
                       "start": {
-                        "line": 9,
+                        "line": 11,
                         "column": 2
                       },
                       "end": {
-                        "line": 9,
+                        "line": 11,
                         "column": 16
                       },
                       "identifierName": "epicMiddleware"
                     },
                     "name": "epicMiddleware"
-                  },
-                  {
-                    "type": "MemberExpression",
-                    "start": 360,
-                    "end": 393,
-                    "loc": {
-                      "start": {
-                        "line": 10,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 10,
-                        "column": 35
-                      }
-                    },
-                    "object": {
-                      "type": "Identifier",
-                      "start": 360,
-                      "end": 376,
-                      "loc": {
-                        "start": {
-                          "line": 10,
-                          "column": 2
-                        },
-                        "end": {
-                          "line": 10,
-                          "column": 18
-                        },
-                        "identifierName": "LoggerMiddleware"
-                      },
-                      "name": "LoggerMiddleware"
-                    },
-                    "property": {
-                      "type": "Identifier",
-                      "start": 377,
-                      "end": 393,
-                      "loc": {
-                        "start": {
-                          "line": 10,
-                          "column": 19
-                        },
-                        "end": {
-                          "line": 10,
-                          "column": 35
-                        },
-                        "identifierName": "loggerMiddleware"
-                      },
-                      "name": "loggerMiddleware"
-                    },
-                    "computed": false
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 397,
-                    "end": 414,
-                    "loc": {
-                      "start": {
-                        "line": 11,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 11,
-                        "column": 19
-                      },
-                      "identifierName": "promiseMiddleware"
-                    },
-                    "name": "promiseMiddleware"
                   }
                 ]
               },
@@ -679,15 +482,15 @@
             {
               "type": "CommentLine",
               "value": " define store middlewares as an array",
-              "start": 271,
-              "end": 310,
+              "start": 175,
+              "end": 214,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 9,
                   "column": 0
                 },
                 "end": {
-                  "line": 7,
+                  "line": 9,
                   "column": 39
                 }
               }
@@ -699,15 +502,15 @@
           {
             "type": "CommentLine",
             "value": " define store middlewares as an array",
-            "start": 271,
-            "end": 310,
+            "start": 175,
+            "end": 214,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 9,
                 "column": 0
               },
               "end": {
-                "line": 7,
+                "line": 9,
                 "column": 39
               }
             }
@@ -720,16 +523,48 @@
   "comments": [
     {
       "type": "CommentLine",
-      "value": " define store middlewares as an array",
-      "start": 271,
-      "end": 310,
+      "value": " Library",
+      "start": 0,
+      "end": 10,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 1,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 1,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Epics",
+      "start": 69,
+      "end": 77,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " define store middlewares as an array",
+      "start": 175,
+      "end": 214,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
           "column": 39
         }
       }
@@ -737,22 +572,10 @@
   ],
   "tokens": [
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": " Library",
       "start": 0,
-      "end": 6,
+      "end": 10,
       "loc": {
         "start": {
           "line": 1,
@@ -760,165 +583,7 @@
         },
         "end": {
           "line": 1,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "*",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": 10,
-        "updateContext": null
-      },
-      "value": "*",
-      "start": 7,
-      "end": 8,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 7
-        },
-        "end": {
-          "line": 1,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 9,
-      "end": 11,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 9
-        },
-        "end": {
-          "line": 1,
-          "column": 11
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "promiseMiddleware",
-      "start": 12,
-      "end": 29,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 12
-        },
-        "end": {
-          "line": 1,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 30,
-      "end": 34,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 30
-        },
-        "end": {
-          "line": 1,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "redux-promise",
-      "start": 35,
-      "end": 50,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 35
-        },
-        "end": {
-          "line": 1,
-          "column": 50
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 50,
-      "end": 51,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 50
-        },
-        "end": {
-          "line": 1,
-          "column": 51
+          "column": 10
         }
       }
     },
@@ -937,8 +602,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 52,
-      "end": 58,
+      "start": 11,
+      "end": 17,
       "loc": {
         "start": {
           "line": 2,
@@ -962,8 +627,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 59,
-      "end": 60,
+      "start": 18,
+      "end": 19,
       "loc": {
         "start": {
           "line": 2,
@@ -988,8 +653,8 @@
         "binop": null
       },
       "value": "createEpicMiddleware",
-      "start": 61,
-      "end": 81,
+      "start": 20,
+      "end": 40,
       "loc": {
         "start": {
           "line": 2,
@@ -1013,8 +678,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 82,
-      "end": 83,
+      "start": 41,
+      "end": 42,
       "loc": {
         "start": {
           "line": 2,
@@ -1039,8 +704,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 84,
-      "end": 88,
+      "start": 43,
+      "end": 47,
       "loc": {
         "start": {
           "line": 2,
@@ -1066,8 +731,8 @@
         "updateContext": null
       },
       "value": "redux-observable",
-      "start": 89,
-      "end": 107,
+      "start": 48,
+      "end": 66,
       "loc": {
         "start": {
           "line": 2,
@@ -1092,8 +757,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 107,
-      "end": 108,
+      "start": 66,
+      "end": 67,
       "loc": {
         "start": {
           "line": 2,
@@ -1102,6 +767,22 @@
         "end": {
           "line": 2,
           "column": 56
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Epics",
+      "start": 69,
+      "end": 77,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 8
         }
       }
     },
@@ -1120,15 +801,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 109,
-      "end": 115,
+      "start": 78,
+      "end": 84,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 5,
           "column": 6
         }
       }
@@ -1145,15 +826,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 116,
-      "end": 117,
+      "start": 85,
+      "end": 86,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 5,
           "column": 8
         }
       }
@@ -1170,17 +851,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "LoggerMiddleware",
-      "start": 117,
-      "end": 133,
+      "value": "rootEpic",
+      "start": 87,
+      "end": 95,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 8
+          "line": 5,
+          "column": 9
         },
         "end": {
-          "line": 3,
-          "column": 24
+          "line": 5,
+          "column": 17
         }
       }
     },
@@ -1196,16 +877,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 133,
-      "end": 134,
+      "start": 96,
+      "end": 97,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 24
+          "line": 5,
+          "column": 18
         },
         "end": {
-          "line": 3,
-          "column": 25
+          "line": 5,
+          "column": 19
         }
       }
     },
@@ -1222,16 +903,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 135,
-      "end": 139,
+      "start": 98,
+      "end": 102,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 26
+          "line": 5,
+          "column": 20
         },
         "end": {
-          "line": 3,
-          "column": 30
+          "line": 5,
+          "column": 24
         }
       }
     },
@@ -1248,17 +929,226 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./middleware/logger.middleware",
+      "value": "./root-epic",
+      "start": 103,
+      "end": 116,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 25
+        },
+        "end": {
+          "line": 5,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 116,
+      "end": 117,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 38
+        },
+        "end": {
+          "line": 5,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 119,
+      "end": 124,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "epicMiddleware",
+      "start": 125,
+      "end": 139,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
       "start": 140,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 21
+        },
+        "end": {
+          "line": 7,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "createEpicMiddleware",
+      "start": 142,
+      "end": 162,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 23
+        },
+        "end": {
+          "line": 7,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 162,
+      "end": 163,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 43
+        },
+        "end": {
+          "line": 7,
+          "column": 44
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "rootEpic",
+      "start": 163,
+      "end": 171,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 44
+        },
+        "end": {
+          "line": 7,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 171,
       "end": 172,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 31
+          "line": 7,
+          "column": 52
         },
         "end": {
-          "line": 3,
-          "column": 63
+          "line": 7,
+          "column": 53
         }
       }
     },
@@ -1279,471 +1169,27 @@
       "end": 173,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 63
+          "line": 7,
+          "column": 53
         },
         "end": {
-          "line": 3,
-          "column": 64
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 174,
-      "end": 180,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 0
-        },
-        "end": {
-          "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 181,
-      "end": 182,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Epics",
-      "start": 182,
-      "end": 187,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 8
-        },
-        "end": {
-          "line": 4,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 187,
-      "end": 188,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 13
-        },
-        "end": {
-          "line": 4,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 189,
-      "end": 193,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 15
-        },
-        "end": {
-          "line": 4,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./root-epic",
-      "start": 194,
-      "end": 207,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 20
-        },
-        "end": {
-          "line": 4,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 207,
-      "end": 208,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 33
-        },
-        "end": {
-          "line": 4,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "const",
-        "keyword": "const",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "const",
-      "start": 210,
-      "end": 215,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 0
-        },
-        "end": {
-          "line": 6,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "epicMiddleware",
-      "start": 216,
-      "end": 230,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 6
-        },
-        "end": {
-          "line": 6,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "=",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": true,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "=",
-      "start": 231,
-      "end": 232,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 21
-        },
-        "end": {
-          "line": 6,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "createEpicMiddleware",
-      "start": 233,
-      "end": 253,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 23
-        },
-        "end": {
-          "line": 6,
-          "column": 43
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 253,
-      "end": 254,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 43
-        },
-        "end": {
-          "line": 6,
-          "column": 44
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Epics",
-      "start": 254,
-      "end": 259,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 44
-        },
-        "end": {
-          "line": 6,
-          "column": 49
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ".",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 259,
-      "end": 260,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 49
-        },
-        "end": {
-          "line": 6,
-          "column": 50
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "rootEpic",
-      "start": 260,
-      "end": 268,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 50
-        },
-        "end": {
-          "line": 6,
-          "column": 58
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 268,
-      "end": 269,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 58
-        },
-        "end": {
-          "line": 6,
-          "column": 59
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 269,
-      "end": 270,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 59
-        },
-        "end": {
-          "line": 6,
-          "column": 60
+          "line": 7,
+          "column": 54
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " define store middlewares as an array",
-      "start": 271,
-      "end": 310,
+      "start": 175,
+      "end": 214,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 39
         }
       }
@@ -1763,15 +1209,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 311,
-      "end": 317,
+      "start": 215,
+      "end": 221,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 6
         }
       }
@@ -1791,15 +1237,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 318,
-      "end": 323,
+      "start": 222,
+      "end": 227,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 7
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 12
         }
       }
@@ -1817,15 +1263,15 @@
         "binop": null
       },
       "value": "Middlewares",
-      "start": 324,
-      "end": 335,
+      "start": 228,
+      "end": 239,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 13
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 24
         }
       }
@@ -1844,15 +1290,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 336,
-      "end": 337,
+      "start": 240,
+      "end": 241,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 25
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 26
         }
       }
@@ -1870,15 +1316,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 338,
-      "end": 339,
+      "start": 242,
+      "end": 243,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 27
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 28
         }
       }
@@ -1896,164 +1342,8 @@
         "binop": null
       },
       "value": "epicMiddleware",
-      "start": 342,
-      "end": 356,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 2
-        },
-        "end": {
-          "line": 9,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 356,
-      "end": 357,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 16
-        },
-        "end": {
-          "line": 9,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "LoggerMiddleware",
-      "start": 360,
-      "end": 376,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 2
-        },
-        "end": {
-          "line": 10,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ".",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 376,
-      "end": 377,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 18
-        },
-        "end": {
-          "line": 10,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "loggerMiddleware",
-      "start": 377,
-      "end": 393,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 19
-        },
-        "end": {
-          "line": 10,
-          "column": 35
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 393,
-      "end": 394,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 35
-        },
-        "end": {
-          "line": 10,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "promiseMiddleware",
-      "start": 397,
-      "end": 414,
+      "start": 246,
+      "end": 260,
       "loc": {
         "start": {
           "line": 11,
@@ -2061,7 +1351,7 @@
         },
         "end": {
           "line": 11,
-          "column": 19
+          "column": 16
         }
       }
     },
@@ -2078,8 +1368,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 415,
-      "end": 416,
+      "start": 261,
+      "end": 262,
       "loc": {
         "start": {
           "line": 12,
@@ -2104,8 +1394,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 416,
-      "end": 417,
+      "start": 262,
+      "end": 263,
       "loc": {
         "start": {
           "line": 12,
@@ -2130,8 +1420,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 418,
-      "end": 418,
+      "start": 264,
+      "end": 264,
       "loc": {
         "start": {
           "line": 13,

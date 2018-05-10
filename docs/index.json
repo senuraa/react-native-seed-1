@@ -589,7 +589,7 @@
     "__docId__": 50,
     "kind": "file",
     "name": "src/common/redux/root-epic.js",
-    "content": "import 'rxjs';\nimport { Observable } from 'rxjs/Observable';\nimport { combineEpics } from 'redux-observable';\nimport { getCart } from '../reducers';\nimport { api } from '../services';\nimport * as actions from '../actions';\n\n/**\n * search products epic\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nconst searchProducts = (action$) => {\n  return action$\n    .ofType(actions.GET_ALL_PRODUCTS).switchMap(q => {\n      /*\n       * This example uses the same api of the redux-saga example, thus\n        * it adapts a Promise to an Observable.\n       */\n      return api.getProducts().map(actions.receiveProducts)\n    });\n};\n\n/**\n * checkout epic.\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nconst checkout = (action$,store) => {\n  return action$\n    .ofType(actions.CHECKOUT_REQUEST).switchMap(q => {\n      const cart = getCart(store.getState());\n      return api.buyProducts(cart)\n        .map(cart => actions.checkoutSuccess(cart))\n        .catch(error => Observable.of(actions.checkoutFailure(error)))\n    });\n};\n\n\nexport const rootEpic = combineEpics(\n  searchProducts,\n  checkout\n);\n",
+    "content": "// Library\nimport { combineEpics } from 'redux-observable';\n\n// Effects\nimport { searchProducts, checkout } from '../../modules/product/redux/product.effects';\n\nexport const rootEpic = combineEpics(\n  searchProducts,\n  checkout\n);\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/redux/root-epic.js",
     "access": "public",
@@ -598,116 +598,6 @@
   },
   {
     "__docId__": 51,
-    "kind": "function",
-    "name": "searchProducts",
-    "memberof": "src/common/redux/root-epic.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-epic.js~searchProducts",
-    "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/common/redux/root-epic.js",
-    "importStyle": null,
-    "description": "search products epic",
-    "lineNumber": 14,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{any|*|Observable}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "action$",
-        "description": ""
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "store",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "any",
-        "*",
-        "Observable"
-      ],
-      "spread": false,
-      "description": ""
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 52,
-    "kind": "function",
-    "name": "checkout",
-    "memberof": "src/common/redux/root-epic.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-epic.js~checkout",
-    "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/common/redux/root-epic.js",
-    "importStyle": null,
-    "description": "checkout epic.",
-    "lineNumber": 31,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{any|*|Observable}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "action$",
-        "description": ""
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "store",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "any",
-        "*",
-        "Observable"
-      ],
-      "spread": false,
-      "description": ""
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 53,
     "kind": "variable",
     "name": "rootEpic",
     "memberof": "src/common/redux/root-epic.js",
@@ -715,10 +605,10 @@
     "longname": "src/common/redux/root-epic.js~rootEpic",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/common/redux/root-epic.js",
+    "importPath": "reactnativeapp/src/common/redux/root-epic.js",
     "importStyle": "{rootEpic}",
     "description": null,
-    "lineNumber": 42,
+    "lineNumber": 7,
     "undocument": true,
     "type": {
       "types": [
@@ -727,10 +617,10 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 52,
     "kind": "file",
     "name": "src/common/redux/root-middleware.js",
-    "content": "import * as promiseMiddleware from 'redux-promise';\nimport { createEpicMiddleware } from 'redux-observable';\nimport {LoggerMiddleware} from './middleware/logger.middleware';\nimport {Epics} from './root-epic';\n\nconst epicMiddleware = createEpicMiddleware(Epics.rootEpic);\n// define store middlewares as an array\nexport const Middlewares = [\n  epicMiddleware,\n  LoggerMiddleware.loggerMiddleware,\n  promiseMiddleware\n];\n",
+    "content": "// Library\nimport { createEpicMiddleware } from 'redux-observable';\n\n// Epics\nimport { rootEpic } from './root-epic';\n\nconst epicMiddleware = createEpicMiddleware(rootEpic);\n\n// define store middlewares as an array\nexport const Middlewares = [\n  epicMiddleware\n];\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/redux/root-middleware.js",
     "access": "public",
@@ -738,7 +628,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 53,
     "kind": "variable",
     "name": "epicMiddleware",
     "memberof": "src/common/redux/root-middleware.js",
@@ -746,10 +636,10 @@
     "longname": "src/common/redux/root-middleware.js~epicMiddleware",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/redux/root-middleware.js",
+    "importPath": "reactnativeapp/src/common/redux/root-middleware.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 7,
     "undocument": true,
     "type": {
       "types": [
@@ -759,7 +649,7 @@
     "ignore": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 54,
     "kind": "variable",
     "name": "Middlewares",
     "memberof": "src/common/redux/root-middleware.js",
@@ -767,10 +657,10 @@
     "longname": "src/common/redux/root-middleware.js~Middlewares",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/common/redux/root-middleware.js",
+    "importPath": "reactnativeapp/src/common/redux/root-middleware.js",
     "importStyle": "{Middlewares}",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 10,
     "undocument": true,
     "type": {
       "types": [
@@ -779,10 +669,10 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 55,
     "kind": "file",
     "name": "src/common/redux/root-reducer.js",
-    "content": "import { combineReducers } from 'redux'\nimport { ADD_TO_CART } from '../actions'\nimport { default as cart, getQuantity, getAddedIds } from './cart'\nimport { default as products, getProduct } from './products'\n\nexport function getCart(state) {\n  return state.cart\n}\n\nexport function getCheckoutError(state) {\n  return state.cart.checkoutStatus.error\n}\n\nexport function isCheckoutPending(state) {\n  return state.cart.checkoutStatus.checkoutPending\n}\n\nexport function getTotal(state) {\n  return getAddedIds(state.cart).reduce((total, id) =>\n    total + getProduct(state.products, id).price * getQuantity(state.cart, id),\n    0\n  ).toFixed(2)\n}\n\nexport function getCartProducts(state) {\n  return getAddedIds(state.cart).map(id => ({\n    ...getProduct(state.products, id),\n    quantity: getQuantity(state.cart, id)\n  }))\n}\n\n/**\n * shopping cart reducer.\n */\nconst shoppingCart = combineReducers({\n  cart,\n  products\n})\n\n/**\n * Returns the combined reducer.\n * @param state\n * @param action\n */\nexport const rootReducer = (state, action) => {\n  if(action.type === ADD_TO_CART && state.products.byId[action.productId].inventory <= 0)\n    return state;\n\n  return shoppingCart(state, action)\n}\n",
+    "content": "// Library\nimport { combineReducers } from 'redux';\n\n// Redux\nimport { ADD_TO_CART } from '../../modules/product/redux/product.actions';\nimport { products } from '../../modules/product/redux/product.reducer';\n\n/**\n * shopping cart reducer.\n */\nconst shoppingCart = combineReducers({\n  products\n});\n\n/**\n * Returns the combined reducer.\n * @param state\n * @param action\n */\nexport const rootReducer = (state, action) => {\n  // if(action.type === ADD_TO_CART && state.products.byId[action.productId].inventory <= 0)\n  //   return state;\n\n  return shoppingCart(state, action)\n}\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/redux/root-reducer.js",
     "access": "public",
@@ -790,157 +680,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 58,
-    "kind": "function",
-    "name": "getCart",
-    "memberof": "src/common/redux/root-reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-reducer.js~getCart",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
-    "importStyle": "{getCart}",
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 59,
-    "kind": "function",
-    "name": "getCheckoutError",
-    "memberof": "src/common/redux/root-reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-reducer.js~getCheckoutError",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
-    "importStyle": "{getCheckoutError}",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 60,
-    "kind": "function",
-    "name": "isCheckoutPending",
-    "memberof": "src/common/redux/root-reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-reducer.js~isCheckoutPending",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
-    "importStyle": "{isCheckoutPending}",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 61,
-    "kind": "function",
-    "name": "getTotal",
-    "memberof": "src/common/redux/root-reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-reducer.js~getTotal",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
-    "importStyle": "{getTotal}",
-    "description": null,
-    "lineNumber": 18,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 62,
-    "kind": "function",
-    "name": "getCartProducts",
-    "memberof": "src/common/redux/root-reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/common/redux/root-reducer.js~getCartProducts",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
-    "importStyle": "{getCartProducts}",
-    "description": null,
-    "lineNumber": 25,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 63,
+    "__docId__": 56,
     "kind": "variable",
     "name": "shoppingCart",
     "memberof": "src/common/redux/root-reducer.js",
@@ -948,10 +688,10 @@
     "longname": "src/common/redux/root-reducer.js~shoppingCart",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
+    "importPath": "reactnativeapp/src/common/redux/root-reducer.js",
     "importStyle": null,
     "description": "shopping cart reducer.",
-    "lineNumber": 35,
+    "lineNumber": 11,
     "type": {
       "types": [
         "*"
@@ -960,7 +700,7 @@
     "ignore": true
   },
   {
-    "__docId__": 64,
+    "__docId__": 57,
     "kind": "function",
     "name": "rootReducer",
     "memberof": "src/common/redux/root-reducer.js",
@@ -970,10 +710,10 @@
     "longname": "src/common/redux/root-reducer.js~rootReducer",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/common/redux/root-reducer.js",
+    "importPath": "reactnativeapp/src/common/redux/root-reducer.js",
     "importStyle": "{rootReducer}",
     "description": "Returns the combined reducer.",
-    "lineNumber": 45,
+    "lineNumber": 20,
     "params": [
       {
         "nullable": null,
@@ -1003,10 +743,10 @@
     }
   },
   {
-    "__docId__": 65,
+    "__docId__": 58,
     "kind": "file",
     "name": "src/common/redux/root-store.js",
-    "content": "import { createStore, applyMiddleware, compose } from 'redux';\nimport * as reduxLoop from 'redux-loop-symbol-ponyfill';\nimport {Reducer} from './root-reducer';\nimport {Epics} from './root-epic';\nimport { Middlewares } from './root-middleware';\nimport {composeWithDevTools} from 'redux-devtools-extension';\n\nconst enhancers = [\n  applyMiddleware(...Middlewares),\n  reduxLoop.install()\n];\n\n/* Enable redux dev tools only in development.\n * We suggest using the standalone React Native Debugger extension:\n * https://github.com/jhen0409/react-native-debugger\n */\n/* tslint-disable no-undef */\nconst composeEnhancers = composeWithDevTools({});\n/* tslint-enable no-undef */\n\nconst enhancer = composeEnhancers(...enhancers);\n\n// create the store\nexport const store = createStore(\n  Reducer.mainReducer,\n  null,\n  enhancer\n);\n",
+    "content": "// Library\nimport { createStore, applyMiddleware, compose } from 'redux';\nimport { composeWithDevTools } from 'redux-devtools-extension';\n\n// Redux\nimport { rootReducer } from './root-reducer';\nimport { Middlewares } from './root-middleware';\n\nconst enhancers = [\n  applyMiddleware(...Middlewares)\n];\n\n/* Enable redux dev tools only in development.\n * We suggest using the standalone React Native Debugger extension:\n * https://github.com/jhen0409/react-native-debugger\n */\n/* tslint-disable no-undef */\nconst composeEnhancers = composeWithDevTools({});\n/* tslint-enable no-undef */\n\nconst enhancer = composeEnhancers(...enhancers);\n\n// create the store\nexport const store = createStore(\n  rootReducer,\n  enhancer\n);\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/redux/root-store.js",
     "access": "public",
@@ -1014,7 +754,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 66,
+    "__docId__": 59,
     "kind": "variable",
     "name": "enhancers",
     "memberof": "src/common/redux/root-store.js",
@@ -1022,10 +762,10 @@
     "longname": "src/common/redux/root-store.js~enhancers",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/redux/root-store.js",
+    "importPath": "reactnativeapp/src/common/redux/root-store.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 9,
     "undocument": true,
     "type": {
       "types": [
@@ -1035,7 +775,7 @@
     "ignore": true
   },
   {
-    "__docId__": 67,
+    "__docId__": 60,
     "kind": "variable",
     "name": "composeEnhancers",
     "memberof": "src/common/redux/root-store.js",
@@ -1043,7 +783,7 @@
     "longname": "src/common/redux/root-store.js~composeEnhancers",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/redux/root-store.js",
+    "importPath": "reactnativeapp/src/common/redux/root-store.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 18,
@@ -1056,7 +796,7 @@
     "ignore": true
   },
   {
-    "__docId__": 68,
+    "__docId__": 61,
     "kind": "variable",
     "name": "enhancer",
     "memberof": "src/common/redux/root-store.js",
@@ -1064,7 +804,7 @@
     "longname": "src/common/redux/root-store.js~enhancer",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/redux/root-store.js",
+    "importPath": "reactnativeapp/src/common/redux/root-store.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 21,
@@ -1077,7 +817,7 @@
     "ignore": true
   },
   {
-    "__docId__": 69,
+    "__docId__": 62,
     "kind": "variable",
     "name": "store",
     "memberof": "src/common/redux/root-store.js",
@@ -1085,7 +825,7 @@
     "longname": "src/common/redux/root-store.js~store",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/common/redux/root-store.js",
+    "importPath": "reactnativeapp/src/common/redux/root-store.js",
     "importStyle": "{store}",
     "description": null,
     "lineNumber": 24,
@@ -1097,10 +837,41 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 63,
+    "kind": "file",
+    "name": "src/common/services/product.mock.js",
+    "content": "export const _products =[\n    {\n         \"id\":1,\n         \"title\": \"Nerf N-Strike Blazin Bow Blaster\",\n          \"description\": \"Hit your mark with the real bow action of the Blazin' Bow blaster! Pull it back and let fly with one of the 3 giant foam arrows at targets up to 40 feet away. The blaster's 20-inch wingspan gives it big launching power, and you can reload quickly from the blaster's arrow storage compartment! Take aim and sharpen your archery skills with the Blazin' Bow blaster!\",\n          \"specification\": \"Hit your mark with the real bow action of the Blazin' Bow blaster! Pull it back and let fly with one of the 3 giant foam arrows at targets up to 40 feet away. The blaster's 20-inch wingspan gives it big launching power, and you can reload quickly from the blaster's arrow storage compartment! Take aim and sharpen your archery skills with the Blazin' Bow blaster!\",\n         \"price\": 19.99,\n         \"images\": \n          [\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg\"\n               }\n          ]\n    },\n    {\n         \"id\":2,\n         \"title\": \"NERF N-STRIKE ELITE RETALIATOR\",\n         \"description\": \"The NERF N-STRIKE ELITE RETALIATOR blaster is four blasters in one. Modify your blaster for any mission by changing its configuration in moments. Three interchangeable components give you the correct options for any situation, and the components work with many other N-STRIKE ELITE blasters (each sold separately). Gear up and get ready for intense action with the RETALIATOR blaster.\",\n         \"specification\": \"oin the N-STRIKE team N-STRIKE ELITE blasters are the ultimate in blaster performance. Featuring upgraded distance and the revolutionary Elite Dart, this is the final word in today's blaster technology. You need a blaster that can adapt to meet any challenge. Elite customization is yours with the RETALIATOR blaster, which is built with every possible situation in mind. Steady your shot with the Stock, or add the Assault Grip to enhance mobility in high-speed missions. Expand your possibilities for customization even further by adding the Barrel Extension, featuring top and bottom Tactical Rails, for adding other N-STRIKE accessories (each sold separately).\",\n         \"price\": 19.99,\n         \"images\":\n          [\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg\"\n               }\n          ]\n    },\n    {\n         \"id\":3,\n         \"title\": \"Nerf FireVision Ignite Nerfoop Set\",\n         \"description\": \"Fire up the night with a game of FireVision Ignite hoops! This awesome high-performance Nerfoop backboard, hoop and net can hang on a door or wall anywhere in seconds. When you take your shot, both the ball and the rim glow with a fiery blast of light! Whether you're inside or out, the glowing light will amp up the action.\",\n         \"specification\": \"Complete Nerfoop basketball system is built for indoor or outdoor action. Comes with mini basketball that lights up. Rim glows when you shoot. Set includes basketball, backboard, hoop, net, mounting hardware and instructions\",\n         \"price\": 14.99,\n         \"images\": \n          [\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg\"\n               },\n               {\n                    \"thumb\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg\",\n                    \"original\": \"http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg\"\n               }\n          ]\n    }  \n];\n",
+    "static": true,
+    "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/services/product.mock.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "variable",
+    "name": "_products",
+    "memberof": "src/common/services/product.mock.js",
+    "static": true,
+    "longname": "src/common/services/product.mock.js~_products",
+    "access": "private",
+    "export": true,
+    "importPath": "reactnativeapp/src/common/services/product.mock.js",
+    "importStyle": "{_products}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
     "kind": "file",
     "name": "src/common/services/product.service.js",
-    "content": "/**\n * Mocking client-server processing\n */\nimport _products from './products'\nimport { Observable } from 'rxjs/Observable'\n\nconst TIMEOUT = 100;\nconst MAX_CHECKOUT = 2; // max different items\n\n // http://private-5815fe-recommendationsknip.apiary-mock.com/products\n\nexport const api = {\n  getProducts() {\n    return new Observable(observer => {\n      const timerId = setTimeout(() => {\n        observer.next(_products);\n        observer.complete();\n      }, TIMEOUT);\n      return () => clearTimeout(timerId);\n    });\n  },\n\n  buyProducts(cart) {\n    return new Observable(observer => {\n      const timerId = setTimeout(() => {\n        if(Object.keys(cart.quantityById).length <= MAX_CHECKOUT)\n          observer.next(cart);\n        else\n          observer.error(`You can buy ${MAX_CHECKOUT} items at maximum in a checkout`);\n        observer.complete();\n      }, TIMEOUT);\n\n      return () => clearTimeout(timerId);\n    });\n  }\n}\n",
+    "content": "/**\n * Mocking client-server processing\n */\nimport { _products } from './product.mock'\nimport { Observable } from 'rxjs/Observable'\n\nconst TIMEOUT = 100;\nconst MAX_CHECKOUT = 2; // max different items\n\n // http://private-5815fe-recommendationsknip.apiary-mock.com/products\n\nexport const api = {\n  getProducts() {\n    return new Observable(observer => {\n      const timerId = setTimeout(() => {\n        observer.next(_products);\n        observer.complete();\n      }, TIMEOUT);\n      return () => clearTimeout(timerId);\n    });\n  },\n\n  buyProducts(cart) {\n    return new Observable(observer => {\n      const timerId = setTimeout(() => {\n        if(Object.keys(cart.quantityById).length <= MAX_CHECKOUT)\n          observer.next(cart);\n        else\n          observer.error(`You can buy ${MAX_CHECKOUT} items at maximum in a checkout`);\n        observer.complete();\n      }, TIMEOUT);\n\n      return () => clearTimeout(timerId);\n    });\n  }\n}\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/common/services/product.service.js",
     "access": "public",
@@ -1108,7 +879,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 71,
+    "__docId__": 66,
     "kind": "variable",
     "name": "TIMEOUT",
     "memberof": "src/common/services/product.service.js",
@@ -1116,7 +887,7 @@
     "longname": "src/common/services/product.service.js~TIMEOUT",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/services/product.service.js",
+    "importPath": "reactnativeapp/src/common/services/product.service.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 7,
@@ -1129,7 +900,7 @@
     "ignore": true
   },
   {
-    "__docId__": 72,
+    "__docId__": 67,
     "kind": "variable",
     "name": "MAX_CHECKOUT",
     "memberof": "src/common/services/product.service.js",
@@ -1137,7 +908,7 @@
     "longname": "src/common/services/product.service.js~MAX_CHECKOUT",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/common/services/product.service.js",
+    "importPath": "reactnativeapp/src/common/services/product.service.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 8,
@@ -1150,7 +921,7 @@
     "ignore": true
   },
   {
-    "__docId__": 73,
+    "__docId__": 68,
     "kind": "variable",
     "name": "api",
     "memberof": "src/common/services/product.service.js",
@@ -1158,7 +929,7 @@
     "longname": "src/common/services/product.service.js~api",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/common/services/product.service.js",
+    "importPath": "reactnativeapp/src/common/services/product.service.js",
     "importStyle": "{api}",
     "description": null,
     "lineNumber": 12,
@@ -1170,7 +941,38 @@
     }
   },
   {
-    "__docId__": 74,
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/modules/product/product.style.js",
+    "content": "// library\nimport { StyleSheet } from 'react-native';\n\nexport const styles = StyleSheet.create({\n    container: {\n      flex: 1,\n      paddingTop: 20,\n      backgroundColor: '#fff',\n      alignItems: 'center',\n      justifyContent: 'center',\n    },\n});\n\n",
+    "static": true,
+    "longname": "/Users/vipinessent/htdocs/react-native-app/src/modules/product/product.style.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "variable",
+    "name": "styles",
+    "memberof": "src/modules/product/product.style.js",
+    "static": true,
+    "longname": "src/modules/product/product.style.js~styles",
+    "access": "public",
+    "export": true,
+    "importPath": "reactnativeapp/src/modules/product/product.style.js",
+    "importStyle": "{styles}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
     "kind": "file",
     "name": "src/modules/product/redux/product.actions.js",
     "content": "/**\n * these are the factory methods for the actions.\n */\nexport const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';\nexport const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';\n\nexport const ADD_TO_CART = 'ADD_TO_CART';\nexport const REMOVE_FROM_CART = 'REMOVE_FROM_CART';\n\nexport const CHECKOUT_REQUEST = 'CHECKOUT_REQUEST';\nexport const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS';\nexport const CHECKOUT_FAILURE = 'CHECKOUT_FAILURE';\n\n\nexport function getAllProducts() {\n  return {\n    type: GET_ALL_PRODUCTS\n  }\n}\n\nexport function receiveProducts(products) {\n  return {\n    type: RECEIVE_PRODUCTS,\n    products: products\n  }\n}\n\nexport function addToCart(productId) {\n  return {\n    type: ADD_TO_CART,\n    productId\n  }\n}\n\nexport function removeFromCart(productId) {\n  return {\n    type: REMOVE_FROM_CART,\n    productId\n  }\n}\n\nexport function checkout() {\n  return {\n    type: CHECKOUT_REQUEST\n  }\n}\n\nexport function checkoutSuccess(cart) {\n  return {\n    type: CHECKOUT_SUCCESS,\n    cart\n  }\n}\n\nexport function checkoutFailure(error) {\n  return {\n    type: CHECKOUT_FAILURE,\n    error\n  }\n}\n",
@@ -1181,7 +983,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 75,
+    "__docId__": 72,
     "kind": "variable",
     "name": "GET_ALL_PRODUCTS",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1189,7 +991,7 @@
     "longname": "src/modules/product/redux/product.actions.js~GET_ALL_PRODUCTS",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{GET_ALL_PRODUCTS}",
     "description": "these are the factory methods for the actions.",
     "lineNumber": 4,
@@ -1200,7 +1002,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 73,
     "kind": "variable",
     "name": "RECEIVE_PRODUCTS",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1208,7 +1010,7 @@
     "longname": "src/modules/product/redux/product.actions.js~RECEIVE_PRODUCTS",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{RECEIVE_PRODUCTS}",
     "description": null,
     "lineNumber": 5,
@@ -1220,7 +1022,7 @@
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 74,
     "kind": "variable",
     "name": "ADD_TO_CART",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1228,7 +1030,7 @@
     "longname": "src/modules/product/redux/product.actions.js~ADD_TO_CART",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{ADD_TO_CART}",
     "description": null,
     "lineNumber": 7,
@@ -1240,7 +1042,7 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 75,
     "kind": "variable",
     "name": "REMOVE_FROM_CART",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1248,7 +1050,7 @@
     "longname": "src/modules/product/redux/product.actions.js~REMOVE_FROM_CART",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{REMOVE_FROM_CART}",
     "description": null,
     "lineNumber": 8,
@@ -1260,7 +1062,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 76,
     "kind": "variable",
     "name": "CHECKOUT_REQUEST",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1268,7 +1070,7 @@
     "longname": "src/modules/product/redux/product.actions.js~CHECKOUT_REQUEST",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{CHECKOUT_REQUEST}",
     "description": null,
     "lineNumber": 10,
@@ -1280,7 +1082,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 77,
     "kind": "variable",
     "name": "CHECKOUT_SUCCESS",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1288,7 +1090,7 @@
     "longname": "src/modules/product/redux/product.actions.js~CHECKOUT_SUCCESS",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{CHECKOUT_SUCCESS}",
     "description": null,
     "lineNumber": 11,
@@ -1300,7 +1102,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 78,
     "kind": "variable",
     "name": "CHECKOUT_FAILURE",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1308,7 +1110,7 @@
     "longname": "src/modules/product/redux/product.actions.js~CHECKOUT_FAILURE",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{CHECKOUT_FAILURE}",
     "description": null,
     "lineNumber": 12,
@@ -1320,7 +1122,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 79,
     "kind": "function",
     "name": "getAllProducts",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1330,7 +1132,7 @@
     "longname": "src/modules/product/redux/product.actions.js~getAllProducts",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{getAllProducts}",
     "description": null,
     "lineNumber": 15,
@@ -1343,7 +1145,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 80,
     "kind": "function",
     "name": "receiveProducts",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1353,7 +1155,7 @@
     "longname": "src/modules/product/redux/product.actions.js~receiveProducts",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{receiveProducts}",
     "description": null,
     "lineNumber": 21,
@@ -1373,7 +1175,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 81,
     "kind": "function",
     "name": "addToCart",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1383,7 +1185,7 @@
     "longname": "src/modules/product/redux/product.actions.js~addToCart",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{addToCart}",
     "description": null,
     "lineNumber": 28,
@@ -1403,7 +1205,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 82,
     "kind": "function",
     "name": "removeFromCart",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1413,7 +1215,7 @@
     "longname": "src/modules/product/redux/product.actions.js~removeFromCart",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{removeFromCart}",
     "description": null,
     "lineNumber": 35,
@@ -1433,7 +1235,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 83,
     "kind": "function",
     "name": "checkout",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1443,7 +1245,7 @@
     "longname": "src/modules/product/redux/product.actions.js~checkout",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{checkout}",
     "description": null,
     "lineNumber": 42,
@@ -1456,7 +1258,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 84,
     "kind": "function",
     "name": "checkoutSuccess",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1466,7 +1268,7 @@
     "longname": "src/modules/product/redux/product.actions.js~checkoutSuccess",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{checkoutSuccess}",
     "description": null,
     "lineNumber": 48,
@@ -1486,7 +1288,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 85,
     "kind": "function",
     "name": "checkoutFailure",
     "memberof": "src/modules/product/redux/product.actions.js",
@@ -1496,7 +1298,7 @@
     "longname": "src/modules/product/redux/product.actions.js~checkoutFailure",
     "access": "public",
     "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.actions.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.actions.js",
     "importStyle": "{checkoutFailure}",
     "description": null,
     "lineNumber": 55,
@@ -1516,31 +1318,31 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 86,
     "kind": "file",
-    "name": "src/modules/product/redux/product.container.js",
-    "content": "import { bindActionCreators } from 'redux'\nimport { connect } from 'react-redux'\nimport ProductList from '../product.component'\nimport * as ItemsActions from '../actions/items'\n\nfunction mapStateToProps(state) {\n  return {\n    products: getVisibleProducts(state.products)\n  }\n}\n\nfunction mapDispatchToProps(dispatch) {\n  return bindActionCreators(ItemsActions, dispatch)\n}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(ProductList)\n",
+    "name": "src/modules/product/redux/product.connect.js",
+    "content": "// Library\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\n\n// Redux\nimport * as ProductActions from './product.actions';\n  \nfunction mapStateToProps(state) {\n    return {\n        products: state.products\n    }\n}\n\nfunction mapDispatchToProps(dispatch) {\n    return bindActionCreators(ProductActions, dispatch)\n}\n\nexport default connect(mapStateToProps, mapDispatchToProps)\n",
     "static": true,
-    "longname": "/Users/vipinessent/htdocs/react-native-app/src/modules/product/redux/product.container.js",
+    "longname": "/Users/vipinessent/htdocs/react-native-app/src/modules/product/redux/product.connect.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 90,
+    "__docId__": 87,
     "kind": "function",
     "name": "mapStateToProps",
-    "memberof": "src/modules/product/redux/product.container.js",
+    "memberof": "src/modules/product/redux/product.connect.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/modules/product/redux/product.container.js~mapStateToProps",
+    "longname": "src/modules/product/redux/product.connect.js~mapStateToProps",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.container.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.connect.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 8,
     "undocument": true,
     "params": [
       {
@@ -1558,20 +1360,20 @@
     "ignore": true
   },
   {
-    "__docId__": 91,
+    "__docId__": 88,
     "kind": "function",
     "name": "mapDispatchToProps",
-    "memberof": "src/modules/product/redux/product.container.js",
+    "memberof": "src/modules/product/redux/product.connect.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/modules/product/redux/product.container.js~mapDispatchToProps",
+    "longname": "src/modules/product/redux/product.connect.js~mapDispatchToProps",
     "access": "public",
     "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.container.js",
+    "importPath": "reactnativeapp/src/modules/product/redux/product.connect.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 14,
     "undocument": true,
     "params": [
       {
@@ -1589,10 +1391,10 @@
     "ignore": true
   },
   {
-    "__docId__": 92,
+    "__docId__": 89,
     "kind": "file",
     "name": "src/modules/product/redux/product.effects.js",
-    "content": "import 'rxjs';\nimport { Observable } from 'rxjs/Observable';\nimport { combineEpics } from 'redux-observable';\nimport { getCart } from '../reducers';\nimport { api } from '../services';\nimport * as actions from '../actions';\n\n/**\n * search products epic\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nconst searchProducts = (action$) => {\n  return action$\n    .ofType(actions.GET_ALL_PRODUCTS).switchMap(q => {\n      /*\n       * This example uses the same api of the redux-saga example, thus\n        * it adapts a Promise to an Observable.\n       */\n      return api.getProducts().map(actions.receiveProducts)\n    });\n};\n\n/**\n * checkout epic.\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nconst checkout = (action$,store) => {\n  return action$\n    .ofType(actions.CHECKOUT_REQUEST).switchMap(q => {\n      const cart = getCart(store.getState());\n      return api.buyProducts(cart)\n        .map(cart => actions.checkoutSuccess(cart))\n        .catch(error => Observable.of(actions.checkoutFailure(error)))\n    });\n};\n\n\nexport const rootEpic = combineEpics(\n  searchProducts,\n  checkout\n);\n",
+    "content": "// Library\nimport 'rxjs';\nimport { Observable } from 'rxjs/Observable';\nimport { combineEpics } from 'redux-observable';\n\n// Redux\nimport { getCart } from './product.reducer';\nimport { api } from '../../../common/services/product.service';\nimport * as actions from './product.actions';\n\n/**\n * search products epic\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nexport const searchProducts = (action$) => {\n  return action$\n    .ofType(actions.GET_ALL_PRODUCTS).switchMap(q => {\n      /*\n       * This example uses the same api of the redux-saga example, thus\n        * it adapts a Promise to an Observable.\n       */\n      return api.getProducts().map(actions.receiveProducts)\n    });\n};\n\n/**\n * checkout epic.\n * @param action$\n * @param store\n * @returns {any|*|Observable}\n */\nexport const checkout = (action$,store) => {\n  return action$\n    .ofType(actions.CHECKOUT_REQUEST).switchMap(q => {\n      const cart = getCart(store.getState());\n      return api.buyProducts(cart)\n        .map(cart => actions.checkoutSuccess(cart))\n        .catch(error => Observable.of(actions.checkoutFailure(error)))\n    });\n};\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/modules/product/redux/product.effects.js",
     "access": "public",
@@ -1600,7 +1402,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 93,
+    "__docId__": 90,
     "kind": "function",
     "name": "searchProducts",
     "memberof": "src/modules/product/redux/product.effects.js",
@@ -1609,11 +1411,11 @@
     "static": true,
     "longname": "src/modules/product/redux/product.effects.js~searchProducts",
     "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.effects.js",
-    "importStyle": null,
+    "export": true,
+    "importPath": "reactnativeapp/src/modules/product/redux/product.effects.js",
+    "importStyle": "{searchProducts}",
     "description": "search products epic",
-    "lineNumber": 14,
+    "lineNumber": 17,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1651,11 +1453,10 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 94,
+    "__docId__": 91,
     "kind": "function",
     "name": "checkout",
     "memberof": "src/modules/product/redux/product.effects.js",
@@ -1664,11 +1465,11 @@
     "static": true,
     "longname": "src/modules/product/redux/product.effects.js~checkout",
     "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.effects.js",
-    "importStyle": null,
+    "export": true,
+    "importPath": "reactnativeapp/src/modules/product/redux/product.effects.js",
+    "importStyle": "{checkout}",
     "description": "checkout epic.",
-    "lineNumber": 31,
+    "lineNumber": 34,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1706,34 +1507,13 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 95,
-    "kind": "variable",
-    "name": "rootEpic",
-    "memberof": "src/modules/product/redux/product.effects.js",
-    "static": true,
-    "longname": "src/modules/product/redux/product.effects.js~rootEpic",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.effects.js",
-    "importStyle": "{rootEpic}",
-    "description": null,
-    "lineNumber": 42,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 92,
     "kind": "file",
     "name": "src/modules/product/redux/product.reducer.js",
-    "content": "import { combineReducers } from 'redux'\nimport { RECEIVE_PRODUCTS, ADD_TO_CART, REMOVE_FROM_CART } from '../actions'\n\n/**\n * product reducers.\n * @param state\n * @param action\n * @returns {*}\n */\nfunction products(state, action) {\n  switch (action.type) {\n    case ADD_TO_CART:\n      return {\n        ...state,\n        inventory: state.inventory - 1\n      }\n      case REMOVE_FROM_CART:\n        return {\n          ...state,\n          inventory: state.inventory + 1\n        };\n    default:\n      return state\n  }\n}\n\nfunction byId(state = {}, action) {\n  switch (action.type) {\n    case RECEIVE_PRODUCTS:\n      return {\n        ...state,\n        ...action.products.reduce((obj, product) => {\n          obj[product.id] = product;\n          return obj\n        }, {})\n      };\n    default:\n      const { productId } = action;\n      if (productId) {\n        return {\n          ...state,\n          [productId]: products(state[productId], action)\n        };\n      }\n      return state\n  }\n}\n\nfunction visibleIds(state = [], action) {\n  switch (action.type) {\n    case RECEIVE_PRODUCTS:\n      return action.products.map(product => product.id);\n    default:\n      return state\n  }\n}\n\nexport default combineReducers({\n  byId,\n  visibleIds\n})\n\nexport function getProduct(state, id) {\n  return state.byId[id]\n}\n\nexport function getVisibleProducts(state) {\n  return state.visibleIds.map(id => getProduct(state, id))\n}\n",
+    "content": "export const products = (state = [], action) => {\n  switch (action.type) {\n    case 'ADD_TODO':\n      return [\n        ...state,\n        {\n          id: action.id,\n          text: action.text,\n          completed: false\n        }\n      ]\n    case 'TOGGLE_TODO':\n      return state.map(todo =>\n        (todo.id === action.id)\n          ? {...todo, completed: !todo.completed}\n          : todo\n      )\n    default:\n      return state\n  }\n}\n",
     "static": true,
     "longname": "/Users/vipinessent/htdocs/react-native-app/src/modules/product/redux/product.reducer.js",
     "access": "public",
@@ -1741,7 +1521,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 97,
+    "__docId__": 93,
     "kind": "function",
     "name": "products",
     "memberof": "src/modules/product/redux/product.reducer.js",
@@ -1750,104 +1530,11 @@
     "static": true,
     "longname": "src/modules/product/redux/product.reducer.js~products",
     "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.reducer.js",
-    "importStyle": null,
-    "description": "product reducers.",
-    "lineNumber": 10,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{*}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "state",
-        "description": ""
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "action",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "*"
-      ],
-      "spread": false,
-      "description": ""
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 98,
-    "kind": "function",
-    "name": "byId",
-    "memberof": "src/modules/product/redux/product.reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/modules/product/redux/product.reducer.js~byId",
-    "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.reducer.js",
-    "importStyle": null,
+    "export": true,
+    "importPath": "reactnativeapp/src/modules/product/redux/product.reducer.js",
+    "importStyle": "{products}",
     "description": null,
-    "lineNumber": 27,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "optional": true,
-        "types": [
-          "{}"
-        ],
-        "defaultRaw": {},
-        "defaultValue": "{}"
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 99,
-    "kind": "function",
-    "name": "visibleIds",
-    "memberof": "src/modules/product/redux/product.reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/modules/product/redux/product.reducer.js~visibleIds",
-    "access": "public",
-    "export": false,
-    "importPath": "react-native-app/src/modules/product/redux/product.reducer.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 49,
+    "lineNumber": 1,
     "undocument": true,
     "params": [
       {
@@ -1870,78 +1557,11 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 100,
-    "kind": "function",
-    "name": "getProduct",
-    "memberof": "src/modules/product/redux/product.reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/modules/product/redux/product.reducer.js~getProduct",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.reducer.js",
-    "importStyle": "{getProduct}",
-    "description": null,
-    "lineNumber": 63,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "id",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 101,
-    "kind": "function",
-    "name": "getVisibleProducts",
-    "memberof": "src/modules/product/redux/product.reducer.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/modules/product/redux/product.reducer.js~getVisibleProducts",
-    "access": "public",
-    "export": true,
-    "importPath": "react-native-app/src/modules/product/redux/product.reducer.js",
-    "importStyle": "{getVisibleProducts}",
-    "description": null,
-    "lineNumber": 67,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
     }
   },
   {
     "kind": "index",
-    "content": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).\n\nBelow you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).\n\n## Table of Contents\n\n* [Updating to New Releases](#updating-to-new-releases)\n* [Available Scripts](#available-scripts)\n  * [npm start](#npm-start)\n  * [npm test](#npm-test)\n  * [npm run ios](#npm-run-ios)\n  * [npm run android](#npm-run-android)\n  * [npm run eject](#npm-run-eject)\n* [Writing and Running Tests](#writing-and-running-tests)\n* [Environment Variables](#environment-variables)\n  * [Configuring Packager IP Address](#configuring-packager-ip-address)\n* [Adding Flow](#adding-flow)\n* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)\n* [Sharing and Deployment](#sharing-and-deployment)\n  * [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)\n  * [Building an Expo \"standalone\" app](#building-an-expo-standalone-app)\n  * [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)\n    * [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)\n    * [Should I Use ExpoKit?](#should-i-use-expokit)\n* [Troubleshooting](#troubleshooting)\n  * [Networking](#networking)\n  * [iOS Simulator won't open](#ios-simulator-wont-open)\n  * [QR Code does not scan](#qr-code-does-not-scan)\n\n## Updating to New Releases\n\nYou should only need to update the global installation of `create-react-native-app` very rarely, ideally never.\n\nUpdating the `react-native-scripts` dependency of your app should be as simple as bumping the version number in `package.json` and reinstalling your project's dependencies.\n\nUpgrading to a new version of React Native requires updating the `react-native`, `react`, and `expo` package versions, and setting the correct `sdkVersion` in `app.json`. See the [versioning guide](https://github.com/react-community/create-react-native-app/blob/master/VERSIONS.md) for up-to-date information about package version compatibility.\n\n## Available Scripts\n\nIf Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.\n\n### `npm start`\n\nRuns your app in development mode.\n\nOpen it in the [Expo app](https://expo.io) on your phone to view it. It will reload if you save edits to your files, and you will see build errors and logs in the terminal.\n\nSometimes you may need to reset or clear the React Native packager's cache. To do so, you can pass the `--reset-cache` flag to the start script:\n\n```\nnpm start --reset-cache\n# or\nyarn start --reset-cache\n```\n\n#### `npm test`\n\nRuns the [jest](https://github.com/facebook/jest) test runner on your tests.\n\n#### `npm run ios`\n\nLike `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.\n\n#### `npm run android`\n\nLike `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:\n\n##### Using Android Studio's `adb`\n\n1. Make sure that you can run adb from your terminal.\n2. Open Genymotion and navigate to `Settings -> ADB`. Select “Use custom Android SDK tools” and update with your [Android SDK directory](https://stackoverflow.com/questions/25176594/android-sdk-location).\n\n##### Using Genymotion's `adb`\n\n1. Find Genymotion’s copy of adb. On macOS for example, this is normally `/Applications/Genymotion.app/Contents/MacOS/tools/`.\n2. Add the Genymotion tools directory to your path (instructions for [Mac](http://osxdaily.com/2014/08/14/add-new-path-to-path-command-line/), [Linux](http://www.computerhope.com/issues/ch001647.htm), and [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).\n3. Make sure that you can run adb from your terminal.\n\n#### `npm run eject`\n\nThis will start the process of \"ejecting\" from Create React Native App's build scripts. You'll be asked a couple of questions about how you'd like to build your project.\n\n**Warning:** Running eject is a permanent action (aside from whatever version control system you use). An ejected app will require you to have an [Xcode and/or Android Studio environment](https://facebook.github.io/react-native/docs/getting-started.html) set up.\n\n## Customizing App Display Name and Icon\n\nYou can edit `app.json` to include [configuration keys](https://docs.expo.io/versions/latest/guides/configuration.html) under the `expo` key.\n\nTo change your app's display name, set the `expo.name` key in `app.json` to an appropriate string.\n\nTo set an app icon, set the `expo.icon` key in `app.json` to be either a local path or a URL. It's recommended that you use a 512x512 png file with transparency.\n\n## Writing and Running Tests\n\nThis project is set up to use [jest](https://facebook.github.io/jest/) for tests. You can configure whatever testing strategy you like, but jest works out of the box. Create test files in directories called `__tests__` or with the `.test` extension to have the files loaded by jest. See the [the template project](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/App.test.js) for an example test. The [jest documentation](https://facebook.github.io/jest/docs/en/getting-started.html) is also a wonderful resource, as is the [React Native testing tutorial](https://facebook.github.io/jest/docs/en/tutorial-react-native.html).\n\n## Environment Variables\n\nYou can configure some of Create React Native App's behavior using environment variables.\n\n### Configuring Packager IP Address\n\nWhen starting your project, you'll see something like this for your project URL:\n\n```\nexp://192.168.0.2:19000\n```\n\nThe \"manifest\" at that URL tells the Expo app how to retrieve and load your app's JavaScript bundle, so even if you load it in the app via a URL like `exp://localhost:19000`, the Expo client app will still try to retrieve your app at the IP address that the start script provides.\n\nIn some cases, this is less than ideal. This might be the case if you need to run your project inside of a virtual machine and you have to access the packager via a different IP address than the one which prints by default. In order to override the IP address or hostname that is detected by Create React Native App, you can specify your own hostname via the `REACT_NATIVE_PACKAGER_HOSTNAME` environment variable:\n\nMac and Linux:\n\n```\nREACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname' npm start\n```\n\nWindows:\n```\nset REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname'\nnpm start\n```\n\nThe above example would cause the development server to listen on `exp://my-custom-ip-address-or-hostname:19000`.\n\n## Adding Flow\n\nFlow is a static type checker that helps you write code with fewer bugs. Check out this [introduction to using static types in JavaScript](https://medium.com/@preethikasireddy/why-use-static-types-in-javascript-part-1-8382da1e0adb) if you are new to this concept.\n\nReact Native works with [Flow](http://flowtype.org/) out of the box, as long as your Flow version matches the one used in the version of React Native.\n\nTo add a local dependency to the correct Flow version to a Create React Native App project, follow these steps:\n\n1. Find the Flow `[version]` at the bottom of the included [.flowconfig](.flowconfig)\n2. Run `npm install --save-dev flow-bin@x.y.z` (or `yarn add --dev flow-bin@x.y.z`), where `x.y.z` is the .flowconfig version number.\n3. Add `\"flow\": \"flow\"` to the `scripts` section of your `package.json`.\n4. Add `// @flow` to any files you want to type check (for example, to `App.js`).\n\nNow you can run `npm run flow` (or `yarn flow`) to check the files for type errors.\nYou can optionally use a [plugin for your IDE or editor](https://flow.org/en/docs/editors/) for a better integrated experience.\n\nTo learn more about Flow, check out [its documentation](https://flow.org/).\n\n## Sharing and Deployment\n\nCreate React Native App does a lot of work to make app setup and development simple and straightforward, but it's very difficult to do the same for deploying to Apple's App Store or Google's Play Store without relying on a hosted service.\n\n### Publishing to Expo's React Native Community\n\nExpo provides free hosting for the JS-only apps created by CRNA, allowing you to share your app through the Expo client app. This requires registration for an Expo account.\n\nInstall the `exp` command-line tool, and run the publish command:\n\n```\n$ npm i -g exp\n$ exp publish\n```\n\n### Building an Expo \"standalone\" app\n\nYou can also use a service like [Expo's standalone builds](https://docs.expo.io/versions/latest/guides/building-standalone-apps.html) if you want to get an IPA/APK for distribution without having to build the native code yourself.\n\n### Ejecting from Create React Native App\n\nIf you want to build and deploy your app yourself, you'll need to eject from CRNA and use Xcode and Android Studio.\n\nThis is usually as simple as running `npm run eject` in your project, which will walk you through the process. Make sure to install `react-native-cli` and follow the [native code getting started guide for React Native](https://facebook.github.io/react-native/docs/getting-started.html).\n\n#### Should I Use ExpoKit?\n\nIf you have made use of Expo APIs while working on your project, then those API calls will stop working if you eject to a regular React Native project. If you want to continue using those APIs, you can eject to \"React Native + ExpoKit\" which will still allow you to build your own native code and continue using the Expo APIs. See the [ejecting guide](https://github.com/react-community/create-react-native-app/blob/master/EJECTING.md) for more details about this option.\n\n## Troubleshooting\n\n### Networking\n\nIf you're unable to load your app on your phone due to a network timeout or a refused connection, a good first step is to verify that your phone and computer are on the same network and that they can reach each other. Create React Native App needs access to ports 19000 and 19001 so ensure that your network and firewall settings allow access from your device to your computer on both of these ports.\n\nTry opening a web browser on your phone and opening the URL that the packager script prints, replacing `exp://` with `http://`. So, for example, if underneath the QR code in your terminal you see:\n\n```\nexp://192.168.0.1:19000\n```\n\nTry opening Safari or Chrome on your phone and loading\n\n```\nhttp://192.168.0.1:19000\n```\n\nand\n\n```\nhttp://192.168.0.1:19001\n```\n\nIf this works, but you're still unable to load your app by scanning the QR code, please open an issue on the [Create React Native App repository](https://github.com/react-community/create-react-native-app) with details about these steps and any other error messages you may have received.\n\nIf you're not able to load the `http` URL in your phone's web browser, try using the tethering/mobile hotspot feature on your phone (beware of data usage, though), connecting your computer to that WiFi network, and restarting the packager. If you are using a VPN you may need to disable it.\n\n### iOS Simulator won't open\n\nIf you're on a Mac, there are a few errors that users sometimes see when attempting to `npm run ios`:\n\n* \"non-zero exit code: 107\"\n* \"You may need to install Xcode\" but it is already installed\n* and others\n\nThere are a few steps you may want to take to troubleshoot these kinds of errors:\n\n1. Make sure Xcode is installed and open it to accept the license agreement if it prompts you. You can install it from the Mac App Store.\n2. Open Xcode's Preferences, the Locations tab, and make sure that the `Command Line Tools` menu option is set to something. Sometimes when the CLI tools are first installed by Homebrew this option is left blank, which can prevent Apple utilities from finding the simulator. Make sure to re-run `npm/yarn run ios` after doing so.\n3. If that doesn't work, open the Simulator, and under the app menu select `Reset Contents and Settings...`. After that has finished, quit the Simulator, and re-run `npm/yarn run ios`.\n\n### QR Code does not scan\n\nIf you're not able to scan the QR code, make sure your phone's camera is focusing correctly, and also make sure that the contrast on the two colors in your terminal is high enough. For example, WebStorm's default themes may [not have enough contrast](https://github.com/react-community/create-react-native-app/issues/49) for terminal QR codes to be scannable with the system barcode scanners that the Expo app uses.\n\nIf this causes problems for you, you may want to try changing your terminal's color theme to have more contrast, or running Create React Native App from a different terminal. You can also manually enter the URL printed by the packager script in the Expo app's search bar to load it manually.\n",
+    "content": "## React Native Seed App\n[![Build Status](https://travis-ci.org/vip-git/react-native-seed.svg?branch=master)](https://travis-ci.org/vip-git/react-native-seed)\n\n### Build the project\n```\nnpm install\nnpm start\n\nreact-native run-ios (separate command line)\nreact-native run-android (separate command line)\n```\n\n### Run unit tests\n```\nnpm test\n```\n\n### Run E2E tests\n```\n(IOS)\nnpm run build:e2e:ios\nnpm run test:e2e:ios\n\n---------------------------\n\n(ANDROID)\nnpm run build:e2e:android\nnpm run test:e2e:android\n```\n",
     "longname": "/Users/vipinessent/htdocs/react-native-app/README.md",
     "name": "./README.md",
     "static": true,
@@ -1949,7 +1569,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"react-native-app\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"babel-preset-react-native-stage-0\": \"^1.0.1\",\n    \"detox\": \"^7.3.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jest\": \"^22.4.3\",\n    \"jest-react-native\": \"^18.0.0\",\n    \"mocha\": \"^4.0.1\",\n    \"react-test-renderer\": \"16.3.0-alpha.1\"\n  },\n  \"scripts\": {\n    \"start\": \"react-native start\",\n    \"android\": \"react-native run-android\",\n    \"ios\": \"react-native run-ios\",\n    \"test\": \"jest\"\n  },\n  \"jest\": {\n    \"preset\": \"react-native\"\n  },\n  \"detox\": {\n    \"test-runner\": \"mocha\",\n    \"specs\": \"e2e\",\n    \"runner-config\": \"e2e/mocha.opts\",\n    \"configurations\": {\n      \"ios.sim.release\": {\n        \"binaryPath\": \"ios/build/Build/Products/Release-iphonesimulator/reactnativeapp.app\",\n        \"build\": \"export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet\",\n        \"type\": \"ios.simulator\",\n        \"name\": \"iPhone X\"\n      },\n      \"ios.sim.debug\": {\n        \"binaryPath\": \"ios/build/Build/Products/Debug-iphonesimulator/reactnativeapp.app\",\n        \"build\": \"xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build\",\n        \"type\": \"ios.simulator\",\n        \"name\": \"iPhone X\"\n      },\n      \"android.emu.debug\": {\n        \"binaryPath\": \"android/app/build/outputs/apk/debug/app-debug.apk\",\n        \"build\": \"pushd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && popd\",\n        \"type\": \"android.emulator\",\n        \"name\": \"Nexus_5X_API_24_-_GPlay\"\n      },\n      \"android.emu.release\": {\n        \"binaryPath\": \"android/app/build/outputs/apk/release/app-release.apk\",\n        \"build\": \"pushd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd\",\n        \"type\": \"android.emulator\",\n        \"name\": \"Nexus_5X_API_24_-_GPlay\"\n      }\n    }\n  },\n  \"dependencies\": {\n    \"react\": \"16.3.0\",\n    \"react-native\": \"~0.54.1\",\n    \"react-redux\": \"^5.0.7\",\n    \"redux-observable\": \"^0.18.0\",\n    \"rxjs\": \"^6.0.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"reactnativeapp\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"babel-jest\": \"^22.4.3\",\n    \"babel-preset-react-native-stage-0\": \"^1.0.1\",\n    \"detox\": \"^7.3.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jest\": \"^22.4.3\",\n    \"jest-react-native\": \"^18.0.0\",\n    \"react-test-renderer\": \"16.3.0-alpha.1\",\n    \"redux-devtools-extension\": \"^2.13.2\"\n  },\n  \"scripts\": {\n    \"start\": \"react-native start -- --config rn-cli.config.js\",\n    \"android\": \"react-native run-android\",\n    \"ios\": \"react-native run-ios\",\n    \"test\": \"jest\",\n    \"build:e2e:ios\": \"detox build --configuration ios.sim.release\",\n    \"test:e2e:ios\": \"detox build --configuration ios.sim.release && detox test --configuration ios.sim.release\",\n    \"build:e2e:android\": \"detox build -c android.emu.release\",\n    \"test:e2e:android\": \"detox test -c android.emu.release\"\n  },\n  \"jest\": {\n    \"verbose\": true,\n    \"preset\": \"react-native\",\n    \"transform\": {\n      \"^.+\\\\.js$\": \"babel-jest\",\n      \"^.+\\\\.jsx$\": \"babel-jest\"\n    },\n    \"globals\": {\n      \"NODE_ENV\": \"test\"\n    },\n    \"moduleFileExtensions\": [\n      \"js\",\n      \"jsx\",\n      \"json\"\n    ],\n    \"testPathIgnorePatterns\": [\n      \"/e2e/\",\n      \"/node_modules/\"\n    ],\n    \"testMatch\": [\"**/**.unit.test.js\"]\n  },\n  \"detox\": {\n    \"test-runner\": \"jest\",\n    \"runner-config\": \"./jest/detox_config.json\",\n    \"specs\": \"e2e\",\n    \"configurations\": {\n      \"ios.sim.release\": {\n        \"binaryPath\": \"ios/build/Build/Products/Release-iphonesimulator/reactnativeapp.app\",\n        \"build\": \"export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet\",\n        \"type\": \"ios.simulator\",\n        \"name\": \"iPhone X\"\n      },\n      \"ios.sim.debug\": {\n        \"binaryPath\": \"ios/build/Build/Products/Debug-iphonesimulator/reactnativeapp.app\",\n        \"build\": \"xcodebuild -project ios/reactnativeapp.xcodeproj -scheme reactnativeapp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build\",\n        \"type\": \"ios.simulator\",\n        \"name\": \"iPhone X\"\n      },\n      \"android.emu.debug\": {\n        \"binaryPath\": \"android/app/build/outputs/apk/debug/app-debug.apk\",\n        \"build\": \"pushd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && popd\",\n        \"type\": \"android.emulator\",\n        \"name\": \"Nexus_5_API_25\"\n      },\n      \"android.emu.release\": {\n        \"binaryPath\": \"android/app/build/outputs/apk/release/app-release-unsigned.apk\",\n        \"build\": \"pushd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd\",\n        \"type\": \"android.emulator\",\n        \"name\": \"Nexus_5_API_25\"\n      }\n    }\n  },\n  \"dependencies\": {\n    \"react\": \"16.3.0\",\n    \"react-native\": \"0.55.3\",\n    \"react-native-foldview\": \"git+https://github.com/DigitalVibes/react-native-foldview.git\",\n    \"react-redux\": \"^5.0.7\",\n    \"redux\": \"4.0.0\",\n    \"redux-observable\": \"^0.18.0\",\n    \"rxjs\": \"5.0.0\"\n  }\n}\n",
     "longname": "/Users/vipinessent/htdocs/react-native-app/package.json",
     "name": "package.json",
     "static": true,

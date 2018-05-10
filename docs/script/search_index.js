@@ -1,164 +1,146 @@
 window.esdocSearchIndex = [
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~add_to_cart",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~add_to_cart",
     "variable/index.html#static-variable-ADD_TO_CART",
-    "<span>ADD_TO_CART</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>ADD_TO_CART</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkout_failure",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkout_failure",
     "variable/index.html#static-variable-CHECKOUT_FAILURE",
-    "<span>CHECKOUT_FAILURE</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>CHECKOUT_FAILURE</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkout_request",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkout_request",
     "variable/index.html#static-variable-CHECKOUT_REQUEST",
-    "<span>CHECKOUT_REQUEST</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>CHECKOUT_REQUEST</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkout_success",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkout_success",
     "variable/index.html#static-variable-CHECKOUT_SUCCESS",
-    "<span>CHECKOUT_SUCCESS</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>CHECKOUT_SUCCESS</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~get_all_products",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~get_all_products",
     "variable/index.html#static-variable-GET_ALL_PRODUCTS",
-    "<span>GET_ALL_PRODUCTS</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>GET_ALL_PRODUCTS</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/common/redux/root-middleware.js~middlewares",
+    "reactnativeapp/src/common/redux/root-middleware.js~middlewares",
     "variable/index.html#static-variable-Middlewares",
-    "<span>Middlewares</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-middleware.js</span>",
+    "<span>Middlewares</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/redux/root-middleware.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~receive_products",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~receive_products",
     "variable/index.html#static-variable-RECEIVE_PRODUCTS",
-    "<span>RECEIVE_PRODUCTS</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>RECEIVE_PRODUCTS</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~remove_from_cart",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~remove_from_cart",
     "variable/index.html#static-variable-REMOVE_FROM_CART",
-    "<span>REMOVE_FROM_CART</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>REMOVE_FROM_CART</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~addtocart",
+    "reactnativeapp/src/common/services/product.mock.js~_products",
+    "variable/index.html#static-variable-_products",
+    "<span>_products</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/services/product.mock.js</span>",
+    "variable"
+  ],
+  [
+    "reactnativeapp/src/modules/product/redux/product.actions.js~addtocart",
     "function/index.html#static-function-addToCart",
-    "<span>addToCart</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>addToCart</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/common/services/product.service.js~api",
+    "reactnativeapp/src/common/services/product.service.js~api",
     "variable/index.html#static-variable-api",
-    "<span>api</span> <span class=\"search-result-import-path\">react-native-app/src/common/services/product.service.js</span>",
+    "<span>api</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/services/product.service.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkout",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkout",
     "function/index.html#static-function-checkout",
-    "<span>checkout</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>checkout</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkoutfailure",
+    "reactnativeapp/src/modules/product/redux/product.effects.js~checkout",
+    "function/index.html#static-function-checkout",
+    "<span>checkout</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.effects.js</span>",
+    "function"
+  ],
+  [
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkoutfailure",
     "function/index.html#static-function-checkoutFailure",
-    "<span>checkoutFailure</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>checkoutFailure</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~checkoutsuccess",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~checkoutsuccess",
     "function/index.html#static-function-checkoutSuccess",
-    "<span>checkoutSuccess</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>checkoutSuccess</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~getallproducts",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~getallproducts",
     "function/index.html#static-function-getAllProducts",
-    "<span>getAllProducts</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>getAllProducts</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/common/redux/root-reducer.js~getcart",
-    "function/index.html#static-function-getCart",
-    "<span>getCart</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
+    "reactnativeapp/src/modules/product/redux/product.reducer.js~products",
+    "function/index.html#static-function-products",
+    "<span>products</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.reducer.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/common/redux/root-reducer.js~getcartproducts",
-    "function/index.html#static-function-getCartProducts",
-    "<span>getCartProducts</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/common/redux/root-reducer.js~getcheckouterror",
-    "function/index.html#static-function-getCheckoutError",
-    "<span>getCheckoutError</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/modules/product/redux/product.reducer.js~getproduct",
-    "function/index.html#static-function-getProduct",
-    "<span>getProduct</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/common/redux/root-reducer.js~gettotal",
-    "function/index.html#static-function-getTotal",
-    "<span>getTotal</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/modules/product/redux/product.reducer.js~getvisibleproducts",
-    "function/index.html#static-function-getVisibleProducts",
-    "<span>getVisibleProducts</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/common/redux/root-reducer.js~ischeckoutpending",
-    "function/index.html#static-function-isCheckoutPending",
-    "<span>isCheckoutPending</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
-    "function"
-  ],
-  [
-    "react-native-app/src/modules/product/redux/product.actions.js~receiveproducts",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~receiveproducts",
     "function/index.html#static-function-receiveProducts",
-    "<span>receiveProducts</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>receiveProducts</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.actions.js~removefromcart",
+    "reactnativeapp/src/modules/product/redux/product.actions.js~removefromcart",
     "function/index.html#static-function-removeFromCart",
-    "<span>removeFromCart</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.actions.js</span>",
+    "<span>removeFromCart</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.actions.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/common/redux/root-epic.js~rootepic",
+    "reactnativeapp/src/common/redux/root-epic.js~rootepic",
     "variable/index.html#static-variable-rootEpic",
-    "<span>rootEpic</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-epic.js</span>",
+    "<span>rootEpic</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/redux/root-epic.js</span>",
     "variable"
   ],
   [
-    "react-native-app/src/modules/product/redux/product.effects.js~rootepic",
-    "variable/index.html#static-variable-rootEpic",
-    "<span>rootEpic</span> <span class=\"search-result-import-path\">react-native-app/src/modules/product/redux/product.effects.js</span>",
-    "variable"
-  ],
-  [
-    "react-native-app/src/common/redux/root-reducer.js~rootreducer",
+    "reactnativeapp/src/common/redux/root-reducer.js~rootreducer",
     "function/index.html#static-function-rootReducer",
-    "<span>rootReducer</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-reducer.js</span>",
+    "<span>rootReducer</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/redux/root-reducer.js</span>",
     "function"
   ],
   [
-    "react-native-app/src/common/redux/root-store.js~store",
+    "reactnativeapp/src/modules/product/redux/product.effects.js~searchproducts",
+    "function/index.html#static-function-searchProducts",
+    "<span>searchProducts</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/redux/product.effects.js</span>",
+    "function"
+  ],
+  [
+    "reactnativeapp/src/common/redux/root-store.js~store",
     "variable/index.html#static-variable-store",
-    "<span>store</span> <span class=\"search-result-import-path\">react-native-app/src/common/redux/root-store.js</span>",
+    "<span>store</span> <span class=\"search-result-import-path\">reactnativeapp/src/common/redux/root-store.js</span>",
+    "variable"
+  ],
+  [
+    "reactnativeapp/src/modules/product/product.style.js~styles",
+    "variable/index.html#static-variable-styles",
+    "<span>styles</span> <span class=\"search-result-import-path\">reactnativeapp/src/modules/product/product.style.js</span>",
     "variable"
   ],
   [
@@ -480,9 +462,21 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/common/services/product.mock.js",
+    "file/src/common/services/product.mock.js.html",
+    "src/common/services/product.mock.js",
+    "file"
+  ],
+  [
     "src/common/services/product.service.js",
     "file/src/common/services/product.service.js.html",
     "src/common/services/product.service.js",
+    "file"
+  ],
+  [
+    "src/modules/product/product.style.js",
+    "file/src/modules/product/product.style.js.html",
+    "src/modules/product/product.style.js",
     "file"
   ],
   [
@@ -492,9 +486,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/modules/product/redux/product.container.js",
-    "file/src/modules/product/redux/product.container.js.html",
-    "src/modules/product/redux/product.container.js",
+    "src/modules/product/redux/product.connect.js",
+    "file/src/modules/product/redux/product.connect.js.html",
+    "src/modules/product/redux/product.connect.js",
     "file"
   ],
   [

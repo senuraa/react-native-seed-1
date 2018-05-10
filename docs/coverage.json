@@ -1,42 +1,43 @@
 {
-  "coverage": "18.6%",
-  "expectCount": 43,
-  "actualCount": 8,
+  "coverage": "15.15%",
+  "expectCount": 33,
+  "actualCount": 5,
   "files": {
     "src/common/redux/root-epic.js": {
-      "expectCount": 3,
-      "actualCount": 2,
+      "expectCount": 1,
+      "actualCount": 0,
       "undocumentLines": [
-        42
+        7
       ]
     },
     "src/common/redux/root-middleware.js": {
       "expectCount": 2,
       "actualCount": 0,
       "undocumentLines": [
-        6,
-        8
+        7,
+        10
       ]
     },
     "src/common/redux/root-reducer.js": {
-      "expectCount": 7,
+      "expectCount": 2,
       "actualCount": 2,
-      "undocumentLines": [
-        6,
-        10,
-        14,
-        18,
-        25
-      ]
+      "undocumentLines": []
     },
     "src/common/redux/root-store.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
-        8,
+        9,
         18,
         21,
         24
+      ]
+    },
+    "src/common/services/product.mock.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
       ]
     },
     "src/common/services/product.service.js": {
@@ -46,6 +47,13 @@
         7,
         8,
         12
+      ]
+    },
+    "src/modules/product/product.style.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
       ]
     },
     "src/modules/product/redux/product.actions.js": {
@@ -67,29 +75,24 @@
         55
       ]
     },
-    "src/modules/product/redux/product.container.js": {
+    "src/modules/product/redux/product.connect.js": {
       "expectCount": 2,
       "actualCount": 0,
       "undocumentLines": [
-        6,
-        12
+        8,
+        14
       ]
     },
     "src/modules/product/redux/product.effects.js": {
-      "expectCount": 3,
+      "expectCount": 2,
       "actualCount": 2,
-      "undocumentLines": [
-        42
-      ]
+      "undocumentLines": []
     },
     "src/modules/product/redux/product.reducer.js": {
-      "expectCount": 5,
-      "actualCount": 1,
+      "expectCount": 1,
+      "actualCount": 0,
       "undocumentLines": [
-        27,
-        49,
-        63,
-        67
+        1
       ]
     }
   }

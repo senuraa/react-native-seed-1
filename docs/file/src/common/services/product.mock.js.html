@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/common/services/product.mock.js | reactnativeapp</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#common-redux">common/redux</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rootReducer">rootReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rootEpic">rootEpic</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Middlewares">Middlewares</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-store">store</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#common-services">common/services</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-_products">_products</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-api">api</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-product">modules/product</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-product-redux">modules/product/redux</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addToCart">addToCart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-checkout">checkout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-checkoutFailure">checkoutFailure</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-checkoutSuccess">checkoutSuccess</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllProducts">getAllProducts</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-receiveProducts">receiveProducts</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-removeFromCart">removeFromCart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-checkout">checkout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-searchProducts">searchProducts</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-products">products</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ADD_TO_CART">ADD_TO_CART</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECKOUT_FAILURE">CHECKOUT_FAILURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECKOUT_REQUEST">CHECKOUT_REQUEST</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECKOUT_SUCCESS">CHECKOUT_SUCCESS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_ALL_PRODUCTS">GET_ALL_PRODUCTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RECEIVE_PRODUCTS">RECEIVE_PRODUCTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REMOVE_FROM_CART">REMOVE_FROM_CART</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/common/services/product.mock.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export const _products =[
+    {
+         &quot;id&quot;:1,
+         &quot;title&quot;: &quot;Nerf N-Strike Blazin Bow Blaster&quot;,
+          &quot;description&quot;: &quot;Hit your mark with the real bow action of the Blazin&apos; Bow blaster! Pull it back and let fly with one of the 3 giant foam arrows at targets up to 40 feet away. The blaster&apos;s 20-inch wingspan gives it big launching power, and you can reload quickly from the blaster&apos;s arrow storage compartment! Take aim and sharpen your archery skills with the Blazin&apos; Bow blaster!&quot;,
+          &quot;specification&quot;: &quot;Hit your mark with the real bow action of the Blazin&apos; Bow blaster! Pull it back and let fly with one of the 3 giant foam arrows at targets up to 40 feet away. The blaster&apos;s 20-inch wingspan gives it big launching power, and you can reload quickly from the blaster&apos;s arrow storage compartment! Take aim and sharpen your archery skills with the Blazin&apos; Bow blaster!&quot;,
+         &quot;price&quot;: 19.99,
+         &quot;images&quot;: 
+          [
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg&quot;
+               }
+          ]
+    },
+    {
+         &quot;id&quot;:2,
+         &quot;title&quot;: &quot;NERF N-STRIKE ELITE RETALIATOR&quot;,
+         &quot;description&quot;: &quot;The NERF N-STRIKE ELITE RETALIATOR blaster is four blasters in one. Modify your blaster for any mission by changing its configuration in moments. Three interchangeable components give you the correct options for any situation, and the components work with many other N-STRIKE ELITE blasters (each sold separately). Gear up and get ready for intense action with the RETALIATOR blaster.&quot;,
+         &quot;specification&quot;: &quot;oin the N-STRIKE team N-STRIKE ELITE blasters are the ultimate in blaster performance. Featuring upgraded distance and the revolutionary Elite Dart, this is the final word in today&apos;s blaster technology. You need a blaster that can adapt to meet any challenge. Elite customization is yours with the RETALIATOR blaster, which is built with every possible situation in mind. Steady your shot with the Stock, or add the Assault Grip to enhance mobility in high-speed missions. Expand your possibilities for customization even further by adding the Barrel Extension, featuring top and bottom Tactical Rails, for adding other N-STRIKE accessories (each sold separately).&quot;,
+         &quot;price&quot;: 19.99,
+         &quot;images&quot;:
+          [
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg&quot;
+               }
+          ]
+    },
+    {
+         &quot;id&quot;:3,
+         &quot;title&quot;: &quot;Nerf FireVision Ignite Nerfoop Set&quot;,
+         &quot;description&quot;: &quot;Fire up the night with a game of FireVision Ignite hoops! This awesome high-performance Nerfoop backboard, hoop and net can hang on a door or wall anywhere in seconds. When you take your shot, both the ball and the rim glow with a fiery blast of light! Whether you&apos;re inside or out, the glowing light will amp up the action.&quot;,
+         &quot;specification&quot;: &quot;Complete Nerfoop basketball system is built for indoor or outdoor action. Comes with mini basketball that lights up. Rim glows when you shoot. Set includes basketball, backboard, hoop, net, mounting hardware and instructions&quot;,
+         &quot;price&quot;: 14.99,
+         &quot;images&quot;: 
+          [
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore//common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/b9f83d2b81388746c986c4a81e2f698a2139b687.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4469FD4750569047F5D267C0D8001048.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/ed0218202d61323f15ad71d079529e4d4d6d52fb.jpg&quot;
+               },
+               {
+                    &quot;thumb&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/446A066E50569047F51BDDAE2F7283BE.jpg&quot;,
+                    &quot;original&quot;: &quot;http://www.hasbrotoyshop.com/wcsstore/HTSCatalogAssetStore/common/productimages/en_US/f975b58950569047f5d9773f03ec97cc/4405e2d27b8c91fd094f657912c6aee20db87be1.jpg&quot;
+               }
+          ]
+    }  
+];
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
