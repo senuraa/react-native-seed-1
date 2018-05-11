@@ -1,4 +1,4 @@
-## React Native Seed App
+## React Native Seed App (Work in progress)
 [![Build Status](https://travis-ci.org/vip-git/react-native-seed.svg?branch=master)](https://travis-ci.org/vip-git/react-native-seed)
 
 ### Build the project
